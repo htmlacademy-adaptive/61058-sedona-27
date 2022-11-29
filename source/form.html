@@ -42,6 +42,32 @@
           <img class="intro__text-image" src="img/intro-sedona.svg" width="229" height="39" alt="Надпись &#34;Sedona&#34;">
         </div>
       </section>
+
+      <section class="feedback">
+        <h2 class="feedback__title">Оставьте свой отзыв</h2>
+        <p class="feedback__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+
+        <form  class="feedback-form" action="#" method="post">
+          <fieldset class="feedback-form__fieldset fieldset">
+            <legend class="fieldset__legend">Представьтесь:</legend>
+
+            <label class="fieldset__element field-element" for="feedback-name">
+              <span class="field-element__label">Имя<sup>*</sup>:</span>
+              <input class="field-element__input field" type="text" name="feedback-name" id="feedback-name" value="Пётр" required>
+            </label>
+
+            <label class="fieldset__element field-element" for="feedback-surname">
+              <span class="field-element__label">Фамилия<sup>*</sup>:</span>
+              <input class="field-element__input field" type="text" name="feedback-surname" id="feedback-surname" value="Пустота" required>
+            </label>
+
+            <label class="fieldset__element field-element" for="feedback-patronymic">
+              <span class="field-element__label">Отчество<sup>*</sup>:</span>
+              <input class="field-element__input field" type="text" name="feedback-patronymic" id="feedback-patronymic" value="Викторович" required>
+            </label>
+          </fieldset>
+        </form>
+      </section>
     </main>
 
     <footer class="page__footer footer">
