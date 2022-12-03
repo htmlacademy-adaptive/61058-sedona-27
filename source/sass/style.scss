@@ -1,3 +1,4 @@
-@use 'base/fonts.scss';
-@use 'base/global.scss';
-
+@use "global/fonts.scss";
+@use "global/global.scss";
+@use "components/page.scss";
+@use "components/visually-hidden.scss";
