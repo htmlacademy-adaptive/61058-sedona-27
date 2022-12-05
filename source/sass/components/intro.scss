@@ -1,0 +1,23 @@
+@use "../variables.scss" as var;
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 90px 18px 85px;
+
+  background-color: rgba(var.$color-blue-basic, 0.6);
+  background-image:
+    url("../../img/intro-decoration.svg"),
+    url("../../img/mobile/intro-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom, center;
+  background-size: 1200px 57px, cover;
+
+  &--secondary {
+    padding-top: 52px;
+    padding-bottom: 67px;
+  }
+}
