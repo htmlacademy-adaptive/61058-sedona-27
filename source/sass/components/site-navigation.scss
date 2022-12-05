@@ -1,0 +1,59 @@
+@use "../mixins.scss";
+@use "../variables.scss" as var;
+
+$-link-shadow-top: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+$-link-shadow-bottom: inset 0 -1px 0 rgba(1, 1, 1, 0.2);
+
+.site-navigation__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: var.$site-navigation-toggle-size;
+  height: var.$site-navigation-toggle-size;
+  margin: 0;
+
+  border: none;
+
+  &:disabled {
+    visibility: hidden;
+  }
+}
+
+.site-navigation__list {
+  @include mixins.list-style-reset;
+
+  font-size: 18px;
+  line-height: 1.44;
+  font-weight: 700;
+  color: var.$color-white;
+
+  background-color: var.$color-blue-basic;
+
+  .site-navigation--hidden & {
+    display: none;
+  }
+}
+
+.site-navigation__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 17px 50px 13px;
+
+  color: inherit;
+
+  box-shadow:
+    $-link-shadow-top,
+    $-link-shadow-bottom;
+
+  .site-navigation__item:first-child & {
+    box-shadow: $-link-shadow-bottom;
+  }
+
+  .site-navigation__item:last-child & {
+    box-shadow: $-link-shadow-top;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0, transparent 7px);
+  }
+}
