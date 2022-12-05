@@ -1,0 +1,25 @@
+@use "../mixins.scss";
+@use "../variables.scss" as var;
+
+// container
+.entrance {
+  @include mixins.base-centralizer;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.entrance__title {
+  margin: 0;
+  margin-bottom: 35px;
+
+  font-size: 18px;
+  line-height: 1.44;
+  text-align: center;
+}
+
+.entrance__text {
+  margin: 0;
+  text-align: center;
+  color: var.$color-grey-dark;
+}

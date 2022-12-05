@@ -1,0 +1,21 @@
+@use "../variables.scss" as var;
+
+.advantages__entrance {
+  position: relative;
+  padding-bottom: 53px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 37px;
+
+    background-color: var.$color-blue-basic;
+    background-image: url("../../img/mobile/advantages-entrance-decoration.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+  }
+}

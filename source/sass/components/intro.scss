@@ -1,12 +1,11 @@
+@use "../mixins.scss";
 @use "../variables.scss" as var;
 
 .intro {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  @include mixins.base-centralizer;
 
-  padding: 90px 18px 85px;
+  padding-top: 90px;
+  padding-bottom: 85px;
 
   background-color: rgba(var.$color-blue-basic, 0.6);
   background-image:
