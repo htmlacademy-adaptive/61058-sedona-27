@@ -1,0 +1,32 @@
+@use "../mixins.scss";
+
+.offer {
+  @include mixins.base-centralizer;
+
+  padding-top: 38px;
+  padding-bottom: 49px;
+}
+
+.offer__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 1.24;
+  text-align: center;
+}
+
+.offer__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.offer__find-hotel {
+  margin-top: 32px;
+
+  font-size: 21px;
+  line-height: 1.24;
+
+  align-self: stretch;
+}

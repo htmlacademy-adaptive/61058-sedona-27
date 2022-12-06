@@ -1,0 +1,5 @@
+@use "../variables.scss" as var;
+
+.map {
+  background-color: var.$color-background-map;
+}

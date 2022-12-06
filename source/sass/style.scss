@@ -1,7 +1,13 @@
+// global
 @use "global/fonts.scss";
 @use "global/global.scss";
-@use "components/page.scss";
+
+// reused
 @use "components/visually-hidden.scss";
+@use "components/button.scss";
+
+// other
+@use "components/page.scss";
 @use "components/header.scss";
 @use "components/site-navigation.scss";
 @use "components/intro.scss";
@@ -12,3 +18,4 @@
 @use "components/servises.scss";
 @use "components/catalog.scss";
 @use "components/feedback.scss";
+@use "components/offer.scss";
