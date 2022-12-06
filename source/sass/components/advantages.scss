@@ -1,21 +1,55 @@
+@use "../mixins.scss";
 @use "../variables.scss" as var;
 
-.advantages__entrance {
+.advantages {
+  @include mixins.list-style-reset;
+
+  counter-reset: advantage;
+}
+
+.advantages__item {
   position: relative;
-  padding-bottom: 53px;
 
   &::after {
     content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 37px;
 
-    background-color: var.$color-blue-basic;
-    background-image: url("../../img/mobile/advantages-entrance-decoration.svg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
+    position: absolute;
+    left: var.$base-container-horizontal-padding;
+    right: var.$base-container-horizontal-padding;
+    bottom: 0;
+    height: 1px;
+
+    background-color: var.$color-grey-rare-1;
+  }
+
+  &--illustrated,
+  &--servises,
+  &--last {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.advantages__title {
+  position: relative;
+
+  &::after {
+    counter-increment: advantage;
+    content: "— №" counter(advantage) " —";
+
+    position: absolute;
+    top: calc(100% + 11px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var.$color-grey-dark;
+  }
+
+  .advantages__item--illustrated &::after {
+    color: var.$color-white;
   }
 }

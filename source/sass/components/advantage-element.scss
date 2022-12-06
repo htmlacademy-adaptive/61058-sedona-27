@@ -1,0 +1,41 @@
+@use "../mixins.scss";
+@use "../variables.scss" as var;
+
+.advantage-element {
+  @include mixins.base-centralizer;
+
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  background-color: var.$color-grey-light;
+
+  &--special {
+    padding-top: 37px;
+    padding-bottom: 37px;
+
+    background-color: var.$color-blue-basic;
+    color: var.$color-white;
+  }
+}
+
+.advantage-element__title {
+  margin: 0;
+  margin-bottom: 49px;
+
+  font-size: 18px;
+  line-height: 1.44;
+  text-align: center;
+}
+
+.advantage-element__text {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: var.$color-grey-dark;
+
+  .advantage-element--special & {
+    color: var.$color-white;
+  }
+}
