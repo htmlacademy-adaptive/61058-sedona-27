@@ -6,6 +6,7 @@
 @use "components/visually-hidden.scss";
 @use "components/button.scss";
 @use "components/social.scss";
+@use "components/field.scss";
 
 // other
 @use "components/page.scss";
@@ -19,5 +20,9 @@
 @use "components/advantage-element.scss";
 @use "components/servises.scss";
 @use "components/catalog.scss";
-@use "components/feedback.scss";
 @use "components/offer.scss";
+@use "components/feedback.scss";
+@use "components/fieldset.scss";
+@use "components/feedback-form.scss";
+
+
