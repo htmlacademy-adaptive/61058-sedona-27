@@ -10,6 +10,7 @@
 @use "components/text-field.scss";
 @use "components/change-field.scss";
 @use "components/super-text.scss";
+@use "components/likes.scss";
 
 // other
 @use "components/page.scss";
@@ -22,9 +23,13 @@
 @use "components/advantages.scss";
 @use "components/advantage-element.scss";
 @use "components/servises.scss";
-@use "components/catalog.scss";
+@use "components/map.scss";
 @use "components/offer.scss";
 @use "components/feedback.scss";
 @use "components/fieldset.scss";
 @use "components/feedback-form.scss";
 @use "components/popup.scss";
+@use "components/catalog.scss";
+@use "components/photo-card.scss";
+@use "components/presentation.scss";
+@use "components/video.scss";

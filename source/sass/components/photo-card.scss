@@ -1,0 +1,28 @@
+@use "../mixins.scss";
+@use "../variables.scss" as var;
+
+.photo-card {
+  @include mixins.base-horizontal-padding;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.photo-card__title {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.photo-card__image {
+  width: 100%;
+}
+
+.photo-card__info {
+  margin: 0;
+  text-transform: none;
+  color: var.$color-grey-dark;
+}

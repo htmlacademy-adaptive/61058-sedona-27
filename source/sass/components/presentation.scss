@@ -1,0 +1,29 @@
+@use "../mixins.scss";
+@use "../variables.scss" as var;
+
+.presentation {
+  @include mixins.base-centralizer;
+  padding-top: 17px;
+}
+
+.presentation__title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-size: 18px;
+  line-height: 1.44;
+  text-align: center;
+}
+
+
+.presentation__text {
+  margin: 0;
+  margin-bottom: 38px;
+
+  text-align: center;
+  color: var.$color-grey-dark;
+}
+
+.presentation__video {
+  width: 100%;
+}

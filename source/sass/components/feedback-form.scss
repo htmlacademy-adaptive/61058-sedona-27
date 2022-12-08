@@ -1,19 +1,17 @@
 @use "../mixins.scss";
 @use "../variables.scss" as var;
 
-$-border-line: 1px solid var.$color-grey-rare-2;
-
 .feedback-form {
   display: flex;
   flex-direction: column;
 
   padding-bottom: 24px;
 
-  border-top: $-border-line;
+  border-top: var.$border-line;
 }
 
 .feedback-form__fieldset {
-  border-bottom: $-border-line;
+  border-bottom: var.$border-line;
 
   &--last {
     margin-bottom: 56px;

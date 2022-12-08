@@ -1,4 +1,17 @@
+@use "../mixins.scss";
+@use "../variables.scss" as var;
+
 .catalog__entrance {
   padding-top: 37px;
   padding-bottom: 37px;
+}
+
+.catalog__list {
+  @include mixins.list-style-reset;
+
+  border-top: var.$border-line;
+}
+
+.catalog__item {
+  border-bottom: var.$border-line;
 }

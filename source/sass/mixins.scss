@@ -18,11 +18,15 @@
   list-style-type: none;
 }
 
+@mixin base-horizontal-padding {
+  padding-left: var.$base-container-horizontal-padding;
+  padding-right: var.$base-container-horizontal-padding;
+}
+
 @mixin base-centralizer {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding-left: var.$base-container-horizontal-padding;
-  padding-right: var.$base-container-horizontal-padding;
+  @include base-horizontal-padding;
 }
