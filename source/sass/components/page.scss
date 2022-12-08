@@ -1,0 +1,8 @@
+@use "../variables.scss" as var;
+
+.page {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: var.$font-size-default-mobile;
+  line-height: var.$line-height-default-mobile;
+  text-transform: uppercase;
+}

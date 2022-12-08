@@ -1,0 +1,42 @@
+@use "../variables.scss" as var;
+
+.popup__inner {
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.popup__content {
+  display: flex;
+  flex-direction: column;
+
+  padding: 45px 42px 8px;
+}
+
+.popup__title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-size: 18px;
+  line-height: 1.44;
+  text-align: center;
+}
+
+.popup__message {
+  margin: 0;
+
+  text-align: center;
+}
+
+.popup__button-wrapper {
+  padding: 20px;
+
+  .popup--success & {
+    background-color: var.$color-grey-basic;
+  }
+}
+
+.popup__close {
+  display: block;
+  margin: 0 auto;
+  padding-left: 64px;
+  padding-right: 64px;
+}

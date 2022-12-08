@@ -1,0 +1,25 @@
+@use "../variables.scss" as var;
+
+.video {
+  position: relative;
+}
+
+.video__image {
+  width: 100%;
+}
+
+.video__play {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 0;
+  height: 0;
+  margin: auto;
+
+  border-left: 48px solid var.$color-white-tr-70;
+  border-top: 27px solid transparent;
+  border-bottom: 27px solid transparent;
+}

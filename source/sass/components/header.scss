@@ -1,0 +1,20 @@
+@use "../variables.scss" as var;
+
+.header {
+  position: relative;
+  min-height: var.$site-navigation-toggle-size;
+}
+
+.header__logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header__navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}

@@ -1,0 +1,22 @@
+@use "../mixins.scss";
+@use "../variables.scss" as var;
+
+.intro {
+  @include mixins.base-centralizer;
+
+  padding-top: 90px;
+  padding-bottom: 85px;
+
+  background-color: var.$color-background-intro;
+  background-image:
+    url("../../img/intro-decoration.svg"),
+    url("../../img/mobile/intro-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom, center;
+  background-size: 1200px 57px, cover;
+
+  &--secondary {
+    padding-top: 52px;
+    padding-bottom: 67px;
+  }
+}

@@ -1,0 +1,55 @@
+@use "../mixins.scss";
+@use "../variables.scss" as var;
+
+.advantages {
+  @include mixins.list-style-reset;
+
+  counter-reset: advantage;
+}
+
+.advantages__item {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: var.$base-container-horizontal-padding;
+    right: var.$base-container-horizontal-padding;
+    bottom: 0;
+    height: 1px;
+
+    background-color: var.$color-grey-rare-1;
+  }
+
+  &--illustrated,
+  &--servises,
+  &--last {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.advantages__title {
+  position: relative;
+
+  &::after {
+    counter-increment: advantage;
+    content: "— №" counter(advantage) " —";
+
+    position: absolute;
+    top: calc(100% + 11px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var.$color-grey-dark;
+  }
+
+  .advantages__item--illustrated &::after {
+    color: var.$color-white;
+  }
+}
