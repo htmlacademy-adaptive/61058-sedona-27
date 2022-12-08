@@ -73,12 +73,16 @@
             <ul class="fieldset__list">
               <li class="fieldset__item text-field">
                 <label class="text-field__label" for="feedback-phone-number">Контактный телефон<sup class="super-text">*</sup>:</label>
-                <input class="text-field__input field" type="tel" name="feedback-phone-number" id="feedback-phone-number" placeholder="Введите телефон" required>
+                <div class="text-field__input-container text-field__input-container--telephone">
+                  <input class="text-field__input field" type="tel" name="feedback-phone-number" id="feedback-phone-number" placeholder="Введите телефон" required>
+                </div>
               </li>
 
               <li class="fieldset__item text-field">
                 <label class="text-field__label" for="feedback-email">Электронная почта<sup class="super-text">*</sup>:</label>
-                <input class="text-field__input field" type="email" name="feedback-email" id="feedback-email" placeholder="Введите e-mail" required>
+                <div class="text-field__input-container text-field__input-container--email">
+                  <input class="text-field__input field" type="email" name="feedback-email" id="feedback-email" placeholder="Введите e-mail" required>
+                </div>
               </li>
             </ul>
           </fieldset>
@@ -90,15 +94,15 @@
               <li class="fieldset__item change-field">
                 <label class="change-field__label">
                   <input class="change-field__input visually-hidden" type="radio" name="feedback-impression" id="feedback-impression-positive" value="positive" checked>
-                  <span class="change-field__marker change-field__marker--checkbox" aria-hidden="true"></span>
+                  <span class="change-field__marker change-field__marker--radio" aria-hidden="true"></span>
                   Скорее положительное
                 </label>
               </li>
 
-              <div class="fieldset__item change-field">
+              <li class="fieldset__item change-field">
                 <label class="change-field__label">
                   <input class="change-field__input visually-hidden" type="radio" name="feedback-impression" id="feedback-impression-negative" value="negative">
-                  <span class="change-field__marker change-field__marker--checkbox" aria-hidden="true"></span>
+                  <span class="change-field__marker change-field__marker--radio" aria-hidden="true"></span>
                   Скорее отрицательное
                 </label>
               </li>
@@ -106,7 +110,7 @@
               <li class="fieldset__item change-field">
                 <label class="change-field__label">
                   <input class="change-field__input visually-hidden" type="radio" name="feedback-impression" id="feedback-impression-no-answer" value="no-answer">
-                  <span class="change-field__marker change-field__marker--checkbox" aria-hidden="true"></span>
+                  <span class="change-field__marker change-field__marker--radio" aria-hidden="true"></span>
                   Затрудняюсь ответить
                 </label>
               </li>
@@ -154,7 +158,7 @@
           <fieldset class="feedback-form__fieldset feedback-form__fieldset--last fieldset">
             <legend class="fieldset__legend"><label for="feedback-comment">Опишите свои эмоции:</label></legend>
 
-            <textarea class="feedback-form__textarea field" name="feedback-comment" id="feedback-comment" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea class="fieldset__textarea field" name="feedback-comment" id="feedback-comment" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
 
           <div class="feedback-form__container">
@@ -191,17 +195,23 @@
 
     <div class="popup popup--error">
       <div class="popup__inner">
-        <h2 class="popup__title">Что-то пошло не так!</h2>
-        <p class="popup__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <div class="popup__content">
+          <h2 class="popup__title">Что-то пошло не так!</h2>
+          <p class="popup__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        </div>
 
-        <button class="popup__close button" type="button">OK</button>
+        <div class="popup__button-wrapper">
+          <button class="popup__close button" type="button">OK</button>
+        </div>
       </div>
     </div>
 
     <div class="popup popup--success">
       <div class="popup__inner">
-        <h2 class="popup__title">Ваш отзыв отправлен!</h2>
-        <p class="popup__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <div class="popup__content">
+          <h2 class="popup__title">Ваш отзыв отправлен!</h2>
+          <p class="popup__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        </div>
 
         <div class="popup__button-wrapper">
           <button class="popup__close button" type="button">Закрыть окно</button>

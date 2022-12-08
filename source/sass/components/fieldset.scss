@@ -3,8 +3,10 @@
 
 .fieldset {
   position: relative;
+
   margin: 0;
   padding: 0 var.$base-container-horizontal-padding 24px;
+
   border: none;
 }
 
@@ -28,4 +30,10 @@
   &:not(:last-child) {
     margin-bottom: 16px;
   }
+}
+
+.fieldset__textarea {
+  width: 100%;
+  min-height: 150px;
+  resize: none;
 }

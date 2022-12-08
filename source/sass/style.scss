@@ -7,6 +7,9 @@
 @use "components/button.scss";
 @use "components/social.scss";
 @use "components/field.scss";
+@use "components/text-field.scss";
+@use "components/change-field.scss";
+@use "components/super-text.scss";
 
 // other
 @use "components/page.scss";
@@ -24,5 +27,4 @@
 @use "components/feedback.scss";
 @use "components/fieldset.scss";
 @use "components/feedback-form.scss";
-
-
+@use "components/popup.scss";

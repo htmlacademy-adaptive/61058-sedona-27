@@ -1,0 +1,40 @@
+@use "../variables.scss" as var;
+
+.change-field {
+  position: relative;
+  padding-left: 62px;
+}
+
+.change-field__label {
+  display: block;
+  padding: 10px 0;
+
+  font-size: 18px;
+  line-height: 1.44;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.change-field__marker {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+
+  background-color: var.$color-grey-basic;
+
+  &--radio {
+    border-radius: 50%;
+    border: 15px solid var.$color-grey-basic;
+  }
+
+  &--checkbox {
+    border-radius: 4px;
+  }
+
+  .change-field__input:checked ~ &--radio {
+    background-color: var.$color-grey-dark;
+  }
+}
