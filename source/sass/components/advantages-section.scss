@@ -3,20 +3,31 @@
 
 .advantages-section__entrance {
   position: relative;
+
+  max-width: 520px;
+  margin: 0 auto;
   padding-bottom: 53px;
 
   &::after {
     content: "";
     position: absolute;
-    left: 0;
-    right: 0;
     bottom: 0;
+    width: 100vw;
     height: 37px;
 
     background-color: var.$color-blue-basic;
     background-image: url("../../img/mobile/advantages-entrance-decoration.svg");
     background-repeat: no-repeat;
     background-position: top;
-    background-size: cover;
+    background-size: 100% 37px;
+
+    @media (min-width: var.$tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    padding-top: 48px;
+    padding-bottom: 55px;
   }
 }

@@ -3,20 +3,52 @@
 
 .servises {
   @include mixins.list-style-reset;
-  @include mixins.base-centralizer;
+  @include mixins.base-horizontal-padding;
 
   padding-top: 23px;
   padding-bottom: 46px;
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
 }
 
 .servises__item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 16px 8px;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin: 0;
+  }
+
   &::before {
     content: "";
+    grid-row: span 2;
+
     width: 40px;
     height: 40px;
 
     background-repeat: no-repeat;
     background-position: left top;
+
+    @media (min-width: var.$tablet-width) {
+      margin-bottom: 26px;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 3);
+    margin: 0;
+    padding: 60px 33px;
   }
 }
 
@@ -24,6 +56,11 @@
   margin: 0;
   font-size: 18px;
   line-height: 1.44;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 26px;
+    text-align: center;
+  }
 }
 
 .servises__text {
@@ -31,4 +68,8 @@
   font-size: 14px;
   line-height: 1.5;
   color: var.$color-grey-dark;
+
+  @media (min-width: var.$tablet-width) {
+    text-align: center;
+  }
 }

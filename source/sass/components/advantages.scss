@@ -4,11 +4,27 @@
 .advantages {
   @include mixins.list-style-reset;
 
+  display: flex;
+  flex-direction: column;
   counter-reset: advantage;
+
+  @media (min-width: var.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages__item {
   position: relative;
+  order: 3;
+
+  &--order-first {
+    order: 1;
+  }
+
+  &--order-second {
+    order: 2;
+  }
 
   &::after {
     content: "";
@@ -20,6 +36,10 @@
     height: 1px;
 
     background-color: var.$color-grey-rare-1;
+
+    @media (min-width: var.$tablet-width) {
+      display: none;
+    }
   }
 
   &--illustrated,
@@ -29,6 +49,24 @@
       display: none;
     }
   }
+
+  &--illustrated {
+    @media (min-width: var.$tablet-width) {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  &--reversed {
+    @media (min-width: var.$tablet-width) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.advantages__image {
+  flex-grow: 1;
+  object-fit: cover;
 }
 
 .advantages__title {

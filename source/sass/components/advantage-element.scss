@@ -3,6 +3,7 @@
 
 .advantage-element {
   @include mixins.base-centralizer;
+  justify-content: center;
 
   padding-top: 24px;
   padding-bottom: 25px;
@@ -15,6 +16,11 @@
 
     background-color: var.$color-blue-basic;
     color: var.$color-white;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    width: calc(100% / 3);
+    padding: 42px 33px;
   }
 }
 
