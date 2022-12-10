@@ -3,14 +3,17 @@
 
 .servises {
   @include mixins.list-style-reset;
-  @include mixins.base-horizontal-padding;
+  @include mixins.base-horizontal-paddings;
 
+  max-width: 550px;
+  margin: 0 auto;
   padding-top: 23px;
   padding-bottom: 46px;
 
   @media (min-width: var.$tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    max-width: 100%;
     padding: 0;
   }
 }
@@ -44,11 +47,15 @@
     align-items: center;
     width: calc(100% / 3);
     margin: 0;
-    padding: 60px 33px;
+    padding: 60px var.$advantage-element-horizontal-padding-tablet;
 
     &::before {
       margin-bottom: 26px;
     }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 69px var.$advantage-element-horizontal-padding-desktop;
   }
 }
 
@@ -59,6 +66,9 @@
 
   @media (min-width: var.$tablet-width) {
     margin-bottom: 26px;
+
+    font-size: 21px;
+    line-height: 1.24;
     text-align: center;
   }
 }

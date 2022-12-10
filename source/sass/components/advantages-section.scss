@@ -2,16 +2,20 @@
 @use "../variables.scss" as var;
 
 .advantages-section__entrance {
+  @include mixins.base-horizontal-paddings;
   position: relative;
 
   max-width: 520px;
   margin: 0 auto;
+  padding-top: 32px;
   padding-bottom: 53px;
 
   &::after {
     content: "";
     position: absolute;
+    left: 50%;
     bottom: 0;
+    transform: translateX(-50%);
     width: 100vw;
     height: 37px;
 
@@ -30,4 +34,29 @@
     padding-top: 48px;
     padding-bottom: 55px;
   }
+
+  @media (min-width: var.$desktop-width) {
+    padding-top: 59px;
+    padding-bottom: 44px;
+  }
+}
+
+.advantages-section__title {
+  margin: 0;
+  margin-bottom: 35px;
+
+  font-size: 18px;
+  line-height: 1.44;
+  text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 21px;
+    line-height: 1.24;
+  }
+}
+
+.advantages-section__text {
+  margin: 0;
+  text-align: center;
+  color: var.$color-grey-dark;
 }

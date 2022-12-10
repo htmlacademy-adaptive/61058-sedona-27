@@ -1,10 +1,20 @@
 @use "../mixins.scss";
+@use "../variables.scss" as var;
+
+$-content-max-width: 498px;
 
 .offer {
   @include mixins.base-centralizer;
 
+  max-width: $-content-max-width;
+  margin: 0 auto;
   padding-top: 38px;
   padding-bottom: 49px;
+
+  @media (min-width: var.$tablet-width) {
+    padding-top: 61px;
+    padding-bottom: 58px;
+  }
 }
 
 .offer__title {
@@ -13,6 +23,10 @@
   font-size: 21px;
   line-height: 1.24;
   text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .offer__text {

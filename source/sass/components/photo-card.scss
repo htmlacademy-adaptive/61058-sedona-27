@@ -2,7 +2,7 @@
 @use "../variables.scss" as var;
 
 .photo-card {
-  @include mixins.base-horizontal-padding;
+  @include mixins.base-horizontal-paddings;
   padding-top: 24px;
   padding-bottom: 24px;
 

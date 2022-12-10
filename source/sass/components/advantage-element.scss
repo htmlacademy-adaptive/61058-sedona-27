@@ -1,6 +1,8 @@
 @use "../mixins.scss";
 @use "../variables.scss" as var;
 
+$-text-max-width: 400px;
+
 .advantage-element {
   @include mixins.base-centralizer;
   justify-content: center;
@@ -20,12 +22,17 @@
 
   @media (min-width: var.$tablet-width) {
     width: calc(100% / 3);
-    padding: 42px 33px;
+    padding: 42px var.$advantage-element-horizontal-padding-tablet;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 52px var.$advantage-element-horizontal-padding-desktop;
   }
 }
 
 .advantage-element__title {
-  margin: 0;
+  max-width: $-text-max-width;
+  margin: 0 auto;
   margin-bottom: 49px;
 
   font-size: 18px;
@@ -34,7 +41,8 @@
 }
 
 .advantage-element__text {
-  margin: 0;
+  max-width: $-text-max-width;
+  margin: 0 auto;
 
   font-size: 14px;
   line-height: 1.5;
