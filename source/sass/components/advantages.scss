@@ -36,10 +36,6 @@
     height: 1px;
 
     background-color: var.$color-grey-rare-1;
-
-    @media (min-width: var.$tablet-width) {
-      display: none;
-    }
   }
 
   &--illustrated,
@@ -50,16 +46,22 @@
     }
   }
 
-  &--illustrated {
-    @media (min-width: var.$tablet-width) {
+  @media (min-width: var.$tablet-width) {
+    &--illustrated {
       display: flex;
       width: 100%;
     }
-  }
 
-  &--reversed {
-    @media (min-width: var.$tablet-width) {
+    &--reversed {
       flex-direction: row-reverse;
+    }
+
+    &--servises {
+      width: 100%;
+    }
+
+    &::after {
+      display: none;
     }
   }
 }

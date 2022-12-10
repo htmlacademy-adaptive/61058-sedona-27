@@ -34,10 +34,6 @@
 
     background-repeat: no-repeat;
     background-position: left top;
-
-    @media (min-width: var.$tablet-width) {
-      margin-bottom: 26px;
-    }
   }
 
   @media (min-width: var.$tablet-width) {
@@ -49,6 +45,10 @@
     width: calc(100% / 3);
     margin: 0;
     padding: 60px 33px;
+
+    &::before {
+      margin-bottom: 26px;
+    }
   }
 }
 

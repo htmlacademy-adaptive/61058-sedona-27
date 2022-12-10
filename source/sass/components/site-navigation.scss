@@ -110,20 +110,11 @@ $-link-shadow-bottom: inset 0 -1px 0 rgba(1, 1, 1, 0.2);
 
   .site-navigation__item:first-child & {
     box-shadow: $-link-shadow-bottom;
-
-    @media (min-width: var.$tablet-width) {
-      box-shadow: none;
-    }
   }
 
   .site-navigation__item:last-child & {
     box-shadow: $-link-shadow-top;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0, transparent 7px);
-
-    @media (min-width: var.$tablet-width) {
-      box-shadow: none;
-      background: none;
-    }
   }
 
   @media (min-width: var.$tablet-width) {
@@ -138,6 +129,15 @@ $-link-shadow-bottom: inset 0 -1px 0 rgba(1, 1, 1, 0.2);
 
     &--current {
       color: var.$color-brown-basic;
+    }
+
+    .site-navigation__item:first-child & {
+      box-shadow: none;
+    }
+
+    .site-navigation__item:last-child & {
+      box-shadow: none;
+      background: none;
     }
   }
 }
