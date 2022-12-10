@@ -1,10 +1,23 @@
 @use "../mixins.scss";
+@use "../variables.scss" as var;
 
 .footer {
   @include mixins.base-centralizer;
 
   padding-top: 28px;
   padding-bottom: 23px;
+
+  @media (min-width: var.$tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 36px 60px;
+    padding-right: 76px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding-left: 120px;
+    padding-right: 136px;
+  }
 }
 
 .footer__hashtag {
@@ -14,10 +27,18 @@
   font-size: 21px;
   line-height: 1.24;
   font-weight: 700;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__social {
   margin-bottom: 40px;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__maid-in {
