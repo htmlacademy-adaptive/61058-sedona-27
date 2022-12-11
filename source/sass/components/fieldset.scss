@@ -8,6 +8,10 @@
   padding: 0 var.$base-container-horizontal-padding 24px;
 
   border: none;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0;
+  }
 }
 
 .fieldset__legend {
@@ -20,15 +24,99 @@
   line-height: 1.44;
   font-weight: 700;
   text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0;
+    margin-bottom: 28px;
+    font-size: 21px;
+    line-height: 1.24;
+  }
 }
 
 .fieldset__list {
   @include mixins.list-style-reset;
+
+  display: grid;
+  gap: 16px;
+
+  @media (min-width: var.$tablet-width) {
+    &--change {
+      width: fit-content;
+      margin: 0 auto;
+      grid-template-columns: repeat(2, auto);
+    }
+
+    &--checkbox {
+      column-gap: 32px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    &--change {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0;
+      width: 100%;
+    }
+
+    &--radio {
+      padding: 17px 53px;
+    }
+
+    &--checkbox {
+      padding: 31px 44px;
+    }
+  }
 }
 
 .fieldset__item {
-  &:not(:last-child) {
-    margin-bottom: 16px;
+  @media (min-width: var.$tablet-width) {
+    .fieldset__list--change & {
+      min-width: 224px;
+      max-width: 280px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    .fieldset__list--radio & {
+      max-width: 247px;
+      margin-right: 56px;
+      margin-bottom: 28px;
+    }
+
+    .fieldset__list--checkbox & {
+      min-width: 150px;
+      max-width: 197px;
+      margin-right: 64px;
+      margin-bottom: 28px;
+    }
+
+    .fieldset__list--radio &:nth-child(3n),
+    .fieldset__list--checkbox &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    // Обнуление нижних отступов в последнем ряду списка
+    .fieldset__list--radio &:nth-child(3n):nth-last-child(-n + 1),
+    .fieldset__list--radio &:nth-child(3n - 1):nth-last-child(-n + 2),
+    .fieldset__list--radio &:nth-child(3n - 2):nth-last-child(-n + 3),
+    .fieldset__list--checkbox &:nth-child(4n):nth-last-child(-n + 1),
+    .fieldset__list--checkbox &:nth-child(4n - 1):nth-last-child(-n + 2),
+    .fieldset__list--checkbox &:nth-child(4n - 2):nth-last-child(-n + 3),
+    .fieldset__list--checkbox &:nth-child(4n - 3):nth-last-child(-n + 4) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.fieldset__label {
+  @media (min-width: var.$tablet-width) {
+    padding-right: 33px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding-right: 0;
   }
 }
 
