@@ -1,12 +1,4 @@
 .likes {
-  position: relative;
-
-  display: flex;
-  min-height: 21px;
-  padding-left: 37px;
-}
-
-.likes__toggle {
   display: flex;
   align-items: flex-end;
 
@@ -14,9 +6,7 @@
 }
 
 .likes__icon {
-  position: absolute;
-  left: 0;
-  top: 0;
+  margin-right: 14px;
 }
 
 .likes__count {
