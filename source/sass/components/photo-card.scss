@@ -1,6 +1,8 @@
 @use "../mixins.scss";
 @use "../variables.scss" as var;
 
+$-text-content-max-width: 400px;
+
 .photo-card {
   @include mixins.base-horizontal-paddings;
   padding-top: 24px;
@@ -8,28 +10,64 @@
 
   font-size: 14px;
   line-height: 1.5;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0;
+  }
 }
 
 .photo-card__content {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: var.$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    column-gap: 20px;
+    align-items: center;
+
+    padding: 22px 20px 15px;
+    background-color: var.$color-grey-basic;
+
+    .photo-card--highlighted & {
+      background-color: var.$color-grey-rare-4;
+    }
+  }
+}
+
+.photo-card__image {
+  width: 100%;
+  margin-bottom: 15px;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .photo-card__title {
+  max-width: $-text-content-max-width;
   margin: 0;
 
   font-size: 14px;
   line-height: 1.5;
 }
 
-.photo-card__image {
-  width: 100%;
-  margin-bottom: 15px;
-}
-
 .photo-card__info {
+  max-width: $-text-content-max-width;
   margin: 0;
   margin-bottom: 11px;
   text-transform: none;
   color: var.$color-grey-dark;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.photo-card__likes {
+  @media (min-width: var.$tablet-width) {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    justify-self: end;
+  }
 }
