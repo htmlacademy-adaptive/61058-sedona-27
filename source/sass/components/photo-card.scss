@@ -3,8 +3,10 @@
 
 .photo-card {
   @include mixins.base-horizontal-paddings;
+  display: flex;
+  flex-direction: column;
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 30px;
 
   font-size: 14px;
   line-height: 1.5;
@@ -18,11 +20,13 @@
 }
 
 .photo-card__image {
-  width: 100%;
+  margin-bottom: 15px;
+  order: -1;
 }
 
 .photo-card__info {
   margin: 0;
+  margin-bottom: 11px;
   text-transform: none;
   color: var.$color-grey-dark;
 }

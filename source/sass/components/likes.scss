@@ -1,10 +1,25 @@
-.likes__toggle {
-  width: 23px;
-  height: 21px;
+.likes {
+  position: relative;
 
-  border: none;
+  display: flex;
+  min-height: 21px;
+  padding-left: 37px;
+}
+
+.likes__toggle {
+  display: flex;
+  align-items: flex-end;
+
+  color: inherit;
+}
+
+.likes__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .likes__count {
   font-weight: 700;
+  line-height: 1;
 }
