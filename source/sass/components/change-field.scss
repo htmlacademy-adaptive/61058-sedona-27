@@ -41,26 +41,3 @@
     }
   }
 }
-
-.change-field__marker {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-
-
-  background-color: var.$color-grey-basic;
-
-  &--radio {
-    border-radius: 50%;
-    border: 15px solid var.$color-grey-basic;
-  }
-
-  &--checkbox {
-    border-radius: 4px;
-  }
-
-  .change-field__input:checked ~ &--radio {
-    background-color: var.$color-grey-dark;
-  }
-}
