@@ -1,17 +1,28 @@
 @use "../mixins.scss";
 @use "../variables.scss" as var;
 
+.feedback-section {
+  @media (min-width: var.$tablet-width) {
+    padding-left: var.$tablet-base-horizontal-padding;
+    padding-right: var.$tablet-base-horizontal-padding;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding-left: var.$desktop-base-horizontal-padding;
+    padding-right: var.$desktop-base-horizontal-padding;
+  }
+}
+
 .feedback-section__entrance {
   @include mixins.base-horizontal-paddings;
 
-  max-width: 475px;
+  max-width: 435px;
   margin: 0 auto;
   padding-top: 36px;
   padding-bottom: 28px;
 
   @media (min-width: var.$tablet-width) {
-    padding-top: 64px;
-    padding-bottom: 102px;
+    padding: 64px 0 102px;
   }
 
   @media (min-width: var.$desktop-width) {

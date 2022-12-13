@@ -1,24 +1,39 @@
 @use "../mixins.scss";
 @use "../variables.scss" as var;
 
+$-text-content-max-width: 445px;
+
 .presentation {
   @include mixins.base-centralizer;
-  padding-top: 17px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0 var.$tablet-base-horizontal-padding;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 0 var.$desktop-base-horizontal-padding;
+  }
 }
 
 .presentation__title {
-  margin: 0;
-  margin-bottom: 30px;
+  max-width: $-text-content-max-width;
+  margin: 0 auto;
+  margin-bottom: 32px;
 
   font-size: 18px;
   line-height: 1.44;
   text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+    line-height: 1;
+  }
 }
 
 
 .presentation__text {
-  margin: 0;
-  margin-bottom: 38px;
+  max-width: $-text-content-max-width;
+  margin: 0 auto;
 
   text-align: center;
   color: var.$color-grey-dark;
@@ -26,4 +41,10 @@
 
 .presentation__video {
   width: 100%;
+  max-width: 800px;
+  margin: 38px auto 0;
+
+  @media (min-width: var.$tablet-width) {
+    margin-top: 88px;
+  }
 }

@@ -3,7 +3,7 @@
 
 .catalog-section {
   @media (min-width: var.$tablet-width) {
-    padding: 0 60px;
+    padding: 0 var.$tablet-base-horizontal-padding;
   }
 
   @media (min-width: var.$desktop-width) {
@@ -15,20 +15,16 @@
   @include mixins.base-horizontal-paddings;
 
   max-width: 460px;
-  margin: 0 auto;
-  padding-top: 37px;
-  padding-bottom: 37px;
+  margin: 0 auto 37px;
 
   @media (min-width: var.$tablet-width) {
+    margin-bottom: 77px;
     padding-left: 0;
     padding-right: 0;
-    padding-top: 67px;
-    padding-bottom: 68px;
   }
 
   @media (min-width: var.$desktop-width) {
-    padding-top: 100px;
-    padding-bottom: 65px;
+    margin-bottom: 85px;
   }
 }
 

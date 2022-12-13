@@ -24,7 +24,9 @@ $color-brown-basic: #766357;
 $tablet-width: 768px;
 $desktop-width: 1200px;
 $site-navigation-toggle-size: 56px;
-$base-container-horizontal-padding: 18px;
+$base-container-horizontal-padding: calc(100vw * 20 / 320); // mobile
+$tablet-base-horizontal-padding: calc(100vw * 60 / 768);
+$desktop-base-horizontal-padding: 120px;
 $advantage-element-horizontal-padding-tablet: 33px;
 $advantage-element-horizontal-padding-desktop: 50px;
 
