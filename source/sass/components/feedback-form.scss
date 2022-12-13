@@ -7,8 +7,6 @@ $-legend-line-width: calc((100% - 400px) / 2);
 $-desktop-form-down-elements-max-width: 768px;
 
 .feedback-form {
-  padding-bottom: 24px;
-
   border-top: var.$border-line;
 
   @media (min-width: var.$tablet-width) {
@@ -16,7 +14,6 @@ $-desktop-form-down-elements-max-width: 768px;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-bottom: 64px;
     border-top: none;
 
     &::before {
@@ -74,26 +71,30 @@ $-desktop-form-down-elements-max-width: 768px;
 }
 
 .feedback-form__list {
+  $-desktop-text-fields-horizontal-padding: 63px;
+  $-tablet-text-fields-horizontal-padding:
+    min($-desktop-text-fields-horizontal-padding, calc(100vw * 43 / 768));
+
   @media (min-width: var.$tablet-width) {
     .feedback-form__fieldset--name & {
-      padding-right: 43px;
+      padding-right: $-tablet-text-fields-horizontal-padding;
       padding-bottom: 15px;
     }
 
     .feedback-form__fieldset--contacts & {
-      padding-left: 43px;
+      padding-left: $-tablet-text-fields-horizontal-padding;
       padding-bottom: 15px;
     }
   }
 
   @media (min-width: var.$desktop-width) {
     .feedback-form__fieldset--name & {
-      padding-right: 63px;
+      padding-right: $-desktop-text-fields-horizontal-padding;
       padding-bottom: 17px;
     }
 
     .feedback-form__fieldset--contacts & {
-      padding-left: 63px;
+      padding-left: $-desktop-text-fields-horizontal-padding;
       padding-bottom: 17px;
     }
   }
