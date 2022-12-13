@@ -1,19 +1,23 @@
 @use "../mixins.scss";
 @use "../variables.scss" as var;
 
-$-content-max-width: 498px;
+$-content-max-width: 458px;
 
 .offer {
   @include mixins.base-centralizer;
 
+  box-sizing: content-box;
   max-width: $-content-max-width;
   margin: 0 auto;
   padding-top: 38px;
   padding-bottom: 49px;
 
   @media (min-width: var.$tablet-width) {
-    padding-top: 61px;
-    padding-bottom: 58px;
+    padding: 61px 0 58px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding-bottom: 66px;
   }
 }
 
@@ -43,4 +47,12 @@ $-content-max-width: 498px;
   line-height: 1.24;
 
   align-self: stretch;
+
+  @media (min-width: var.$tablet-width) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-top: 46px;
+  }
 }
