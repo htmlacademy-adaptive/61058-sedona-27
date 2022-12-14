@@ -7,6 +7,20 @@
   min-height: var.$site-navigation-toggle-size;
 }
 
+.header--no-js {
+  @media (max-width: (var.$tablet-width - 1)) {
+    padding-bottom: var.$site-navigation-toggle-size;
+
+    .header__navigation {
+      position: static;
+    }
+
+    .header__logo {
+      top: calc(100% - var.$site-navigation-toggle-size);
+    }
+  }
+}
+
 .header__logo {
   position: absolute;
   top: 0;

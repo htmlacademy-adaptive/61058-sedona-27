@@ -16,42 +16,45 @@ $-link-shadow-bottom: inset 0 -1px 0 rgba(1, 1, 1, 0.2);
   border: none;
   background-color: transparent;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
-    top: 17px;
-    right: 20px;
-    width: 23px;
-    height: 22px;
-    background-image:
-      linear-gradient(
-        to bottom,
-        var.$color-blue-basic 0,
-        var.$color-blue-basic 4px,
-        transparent 4px
-      );
-    background-size: 100% 9px;
+    top: 26px;
+    right: 18px;
+    width: 27px;
+    height: 4px;
+    background-color: var.$color-white;
   }
 
-  &--close {
-    &::before,
-    &::after {
+  &::before {
+    transform: rotate(45deg);
+    background-image: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  .site-navigation--mobile-hidden & {
+    &::before {
       content: "";
       position: absolute;
-      top: 26px;
-      right: 18px;
-      width: 27px;
-      height: 4px;
-      background-color: var.$color-white;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-      background-image: none;
+      top: 17px;
+      right: 20px;
+      width: 23px;
+      height: 22px;
+      background-image:
+        linear-gradient(to bottom,
+          var.$color-blue-basic 0,
+          var.$color-blue-basic 4px,
+          transparent 4px);
+      background-size: 100% 9px;
+      transform: none;
     }
 
     &::after {
-      transform: rotate(-45deg);
+      display: none;
     }
   }
 
@@ -69,11 +72,15 @@ $-link-shadow-bottom: inset 0 -1px 0 rgba(1, 1, 1, 0.2);
 
   background-color: var.$color-blue-basic;
 
-  &--mobile-hidden {
+  .site-navigation--mobile-hidden & {
     display: none;
   }
 
   @media (min-width: var.$tablet-width) {
+    .site-navigation--mobile-hidden & {
+      display: grid;
+    }
+
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
