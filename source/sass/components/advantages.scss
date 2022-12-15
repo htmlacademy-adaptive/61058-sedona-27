@@ -4,11 +4,27 @@
 .advantages {
   @include mixins.list-style-reset;
 
+  display: flex;
+  flex-direction: column;
   counter-reset: advantage;
+
+  @media (min-width: var.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages__item {
   position: relative;
+  order: 3;
+
+  &--order-first {
+    order: 1;
+  }
+
+  &--order-second {
+    order: 2;
+  }
 
   &::after {
     content: "";
@@ -29,6 +45,30 @@
       display: none;
     }
   }
+
+  @media (min-width: var.$tablet-width) {
+    &--illustrated {
+      display: flex;
+      width: 100%;
+    }
+
+    &--reversed {
+      flex-direction: row-reverse;
+    }
+
+    &--servises {
+      width: 100%;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.advantages__image {
+  flex-grow: 1;
+  object-fit: cover;
 }
 
 .advantages__title {
@@ -51,5 +91,11 @@
 
   .advantages__item--illustrated &::after {
     color: var.$color-white;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 21px;
+    line-height: 1.24;
+    padding: 0 28px;
   }
 }

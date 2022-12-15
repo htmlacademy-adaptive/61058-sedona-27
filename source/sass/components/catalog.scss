@@ -1,17 +1,31 @@
 @use "../mixins.scss";
 @use "../variables.scss" as var;
 
-.catalog__entrance {
-  padding-top: 37px;
-  padding-bottom: 37px;
-}
-
-.catalog__list {
+.catalog {
   @include mixins.list-style-reset;
 
   border-top: var.$border-line;
+
+  @media (min-width: var.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: none;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .catalog__item {
   border-bottom: var.$border-line;
+
+  @media (min-width: var.$tablet-width) {
+    border-bottom: none;
+
+    &--main {
+      grid-row: 1;
+      grid-column: 1 / -1;
+    }
+  }
 }

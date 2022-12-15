@@ -1,10 +1,16 @@
-.likes__toggle {
-  width: 23px;
-  height: 21px;
+.likes {
+  display: flex;
+  align-items: flex-end;
 
-  border: none;
+  color: inherit;
+}
+
+.likes__icon {
+  margin-right: 14px;
+  opacity: 0.3;
 }
 
 .likes__count {
   font-weight: 700;
+  line-height: 1;
 }

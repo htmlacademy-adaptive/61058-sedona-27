@@ -1,0 +1,13 @@
+@use "../variables.scss" as var;
+
+.main-index__intro {
+  margin-bottom: 32px;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-bottom: 59px;
+  }
+}

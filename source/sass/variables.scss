@@ -14,11 +14,21 @@ $color-grey-dark-tr-60: rgba(#333333, 0.6);
 $color-grey-light: #eeeeee;
 $color-grey-rare-1: #d6d6d6;
 $color-grey-rare-2: #e5e5e5;
+$color-grey-rare-3: #dbdbdb;
+$color-grey-rare-4: #eaeaea;
 $color-background-intro: rgba(#81b3d2, 0.5);
 $color-background-map: #ccddae;
+$color-brown-basic: #766357;
 
 // sizes
+$tablet-width: 768px;
+$desktop-width: 1200px;
 $site-navigation-toggle-size: 56px;
-$base-container-horizontal-padding: 18px;
+$base-container-horizontal-padding: calc(100vw * 20 / 320); // mobile
+$tablet-base-horizontal-padding: calc(100vw * 60 / 768);
+$desktop-base-horizontal-padding: 120px;
+$advantage-element-horizontal-padding-tablet: 33px;
+$advantage-element-horizontal-padding-desktop: 50px;
 
+// other
 $border-line: 1px solid $color-grey-rare-2;

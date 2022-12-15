@@ -1,0 +1,21 @@
+@use "../variables.scss" as var;
+
+.main-form__intro {
+  margin-bottom: 36px;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-bottom: 115px;
+  }
+}
+
+.main-form__feedback {
+  margin-bottom: 24px;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 64px;
+  }
+}

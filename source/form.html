@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page">
-    <header class="page__header header">
+    <header class="page__header header header--no-js">
       <a class="header__logo" href="index.html">
         <img class="header__logo-image" src="img/logo.png" width="185" height="96" alt="Логотип Седоны.">
       </a>
@@ -28,28 +28,28 @@
             <a class="site-navigation__link site-navigation__link--current">Форма отзыва</a>
           </li>
           <li class="site-navigation__item">
-            <a class="site-navigation__link" href="https://htmlacademy.ru/intensive/adaptive">htmlacademy</a>
+            <a class="site-navigation__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="page__main main-form">
-      <div class="intro intro--secondary">
+      <div class="main-form__intro intro intro--secondary">
         <img src="img/intro-sedona.svg" width="229" height="39" alt="Надпись &#34;Sedona&#34;">
       </div>
 
-      <section class="feedback">
-        <div class="feedback__entrance entrance">
-          <h1 class="feedback__title entrance__title">Фото и видео</h1>
-          <p class="feedback__text entrance__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+      <section class="main-form__feedback feedback-section">
+        <div class="feedback-section__entrance">
+          <h1 class="feedback-section__title">Оставьте свой отзыв</h1>
+          <p class="feedback-section__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
 
         <form  class="feedback-form" action="#" method="post">
-          <fieldset class="feedback-form__fieldset fieldset">
-            <legend class="fieldset__legend">Представьтесь:</legend>
+          <fieldset class="feedback-form__fieldset feedback-form__fieldset--text feedback-form__fieldset--name fieldset">
+            <legend class="feedback-form__legend fieldset__legend">Представьтесь:</legend>
 
-            <ul class="fieldset__list">
+            <ul class="feedback-form__list fieldset__list">
               <li class="fieldset__item text-field">
                 <label class="text-field__label" for="feedback-name">Имя<sup class="super-text">*</sup>:</label>
                 <input class="text-field__input field" type="text" name="feedback-name" id="feedback-name" value="Пётр" placeholder="Имя" required>
@@ -67,10 +67,10 @@
             </ul>
           </fieldset>
 
-          <fieldset class="feedback-form__fieldset fieldset">
-            <legend class="fieldset__legend">Контактная информация:</legend>
+          <fieldset class="feedback-form__fieldset feedback-form__fieldset--text feedback-form__fieldset--contacts fieldset">
+            <legend class="feedback-form__legend fieldset__legend">Контактная информация:</legend>
 
-            <ul class="fieldset__list">
+            <ul class="feedback-form__list fieldset__list">
               <li class="fieldset__item text-field">
                 <label class="text-field__label" for="feedback-phone-number">Контактный телефон<sup class="super-text">*</sup>:</label>
                 <div class="text-field__input-container text-field__input-container--telephone">
@@ -88,77 +88,56 @@
           </fieldset>
 
           <fieldset class="feedback-form__fieldset fieldset">
-            <legend class="fieldset__legend">Ваше общее впечатление:</legend>
+            <legend class="feedback-form__legend feedback-form__legend--decorated fieldset__legend">Ваше общее впечатление:</legend>
 
-            <ul class="fieldset__list">
+            <ul class="fieldset__list fieldset__list--radio">
               <li class="fieldset__item change-field">
-                <label class="change-field__label">
-                  <input class="change-field__input visually-hidden" type="radio" name="feedback-impression" id="feedback-impression-positive" value="positive" checked>
-                  <span class="change-field__marker change-field__marker--radio" aria-hidden="true"></span>
-                  Скорее положительное
-                </label>
+                <input class="change-field__input visually-hidden" type="radio" name="feedback-impression" id="feedback-impression-positive" value="positive" checked>
+                <label class="change-field__label change-field__label--radio" for="feedback-impression-positive">Скорее положительное</label>
               </li>
 
               <li class="fieldset__item change-field">
-                <label class="change-field__label">
-                  <input class="change-field__input visually-hidden" type="radio" name="feedback-impression" id="feedback-impression-negative" value="negative">
-                  <span class="change-field__marker change-field__marker--radio" aria-hidden="true"></span>
-                  Скорее отрицательное
-                </label>
+                <input class="change-field__input visually-hidden" type="radio" name="feedback-impression" id="feedback-impression-negative" value="negative">
+                <label class="change-field__label change-field__label--radio" for="feedback-impression-negative">Скорее отрицательное</label>
               </li>
 
               <li class="fieldset__item change-field">
-                <label class="change-field__label">
-                  <input class="change-field__input visually-hidden" type="radio" name="feedback-impression" id="feedback-impression-no-answer" value="no-answer">
-                  <span class="change-field__marker change-field__marker--radio" aria-hidden="true"></span>
-                  Затрудняюсь ответить
-                </label>
+                <input class="change-field__input visually-hidden" type="radio" name="feedback-impression" id="feedback-impression-no-answer" value="no-answer">
+                <label class="change-field__label change-field__label--radio" for="feedback-impression-no-answer">Затрудняюсь ответить</label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="feedback-form__fieldset fieldset">
-            <legend class="fieldset__legend">Посещенные достопримечательности:</legend>
+          <fieldset class="feedback-form__fieldset feedback-form__fieldset--penult fieldset">
+            <legend class="feedback-form__legend feedback-form__legend--decorated fieldset__legend">Посещенные достопримечательности:</legend>
 
-            <ul class="fieldset__list">
+            <ul class="fieldset__list fieldset__list--checkbox">
               <li class="fieldset__item change-field">
-                <label class="change-field__label">
-                  <input class="change-field__input visually-hidden" type="checkbox" name="feedback-sights-devil-bridge" id="feedback-sights-devil-bridge" checked>
-                  <span class="change-field__marker change-field__marker--checkbox" aria-hidden="true"></span>
-                  Мост Дьявола
-                </label>
+                <input class="change-field__input visually-hidden" type="checkbox" name="feedback-sights-devil-bridge" id="feedback-sights-devil-bridge" checked>
+                <label class="change-field__label change-field__label--checkbox" for="feedback-sights-devil-bridge">Мост Дьявола</label>
               </li>
 
               <li class="fieldset__item change-field">
-                <label class="change-field__label">
-                  <input class="change-field__input visually-hidden" type="checkbox" name="feedback-sights-bell-rock" id="feedback-sights-bell-rock" checked>
-                  <span class="change-field__marker change-field__marker--checkbox" aria-hidden="true"></span>
-                  Гора-Колокол
-                </label>
+                <input class="change-field__input visually-hidden" type="checkbox" name="feedback-sights-bell-rock" id="feedback-sights-bell-rock" checked>
+                <label class="change-field__label change-field__label--checkbox" for="feedback-sights-bell-rock">Гора-Колокол</label>
               </li>
 
               <li class="fieldset__item change-field">
-                <label class="change-field__label">
-                  <input class="change-field__input visually-hidden" type="checkbox" name="feedback-sights-slide-park" id="feedback-sights-slide-park" checked>
-                  <span class="change-field__marker change-field__marker--checkbox" aria-hidden="true"></span>
-                  Слайд-парк
-                </label>
+                <input class="change-field__input visually-hidden" type="checkbox" name="feedback-sights-slide-park" id="feedback-sights-slide-park" checked>
+                <label class="change-field__label change-field__label--checkbox" for="feedback-sights-slide-park">Слайд-парк</label>
               </li>
 
               <li class="fieldset__item change-field">
-                <label class="change-field__label">
-                  <input class="change-field__input visually-hidden" type="checkbox" name="feedback-sights-red-mountain" id="feedback-sights-red-mountain">
-                  <span class="change-field__marker change-field__marker--checkbox" aria-hidden="true"></span>
-                  Красные скалы
-                </label>
+                <input class="change-field__input visually-hidden" type="checkbox" name="feedback-sights-red-mountain" id="feedback-sights-red-mountain">
+                <label class="change-field__label change-field__label--checkbox" for="feedback-sights-red-mountain">Красные скалы</label>
               </li>
             </ul>
           </fieldset>
 
           <fieldset class="feedback-form__fieldset feedback-form__fieldset--last fieldset">
-            <legend class="fieldset__legend"><label for="feedback-comment">Опишите свои эмоции:</label></legend>
+            <legend class="feedback-form__legend feedback-form__legend--decorated fieldset__legend"><label for="feedback-comment">Опишите свои эмоции:</label></legend>
 
-            <textarea class="fieldset__textarea field" name="feedback-comment" id="feedback-comment" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea class="feedback-form__textarea fieldset__textarea field" name="feedback-comment" id="feedback-comment" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
 
           <div class="feedback-form__container">

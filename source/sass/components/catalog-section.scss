@@ -1,0 +1,49 @@
+@use "../mixins.scss";
+@use "../variables.scss" as var;
+
+.catalog-section {
+  @media (min-width: var.$tablet-width) {
+    padding: 0 var.$tablet-base-horizontal-padding;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 0;
+  }
+}
+
+.catalog-section__entrance {
+  @include mixins.base-horizontal-paddings;
+
+  max-width: 460px;
+  margin: 0 auto 37px;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 77px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-bottom: 85px;
+  }
+}
+
+.catalog-section__title {
+  margin: 0;
+  margin-bottom: 32px;
+
+  font-size: 18px;
+  line-height: 1.44;
+  text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+    line-height: 1;
+  }
+}
+
+.catalog-section__text {
+  margin: 0;
+  text-align: center;
+  color: var.$color-grey-dark;
+}

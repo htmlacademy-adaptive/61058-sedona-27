@@ -1,0 +1,52 @@
+@use "../mixins.scss";
+@use "../variables.scss" as var;
+
+.feedback-section {
+  @media (min-width: var.$tablet-width) {
+    padding-left: var.$tablet-base-horizontal-padding;
+    padding-right: var.$tablet-base-horizontal-padding;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding-left: var.$desktop-base-horizontal-padding;
+    padding-right: var.$desktop-base-horizontal-padding;
+  }
+}
+
+.feedback-section__entrance {
+  @include mixins.base-horizontal-paddings;
+
+  max-width: 435px;
+  margin: 0 auto;
+  margin-bottom: 28px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0;
+    margin-bottom: 102px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-bottom: 67px;
+  }
+}
+
+.feedback-section__title {
+  margin: 0;
+  margin-bottom: 24px;
+
+  font-size: 18px;
+  line-height: 1.44;
+  text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 20px;
+
+    font-size: 30px;
+  }
+}
+
+.feedback-section__text {
+  margin: 0;
+  text-align: center;
+  color: var.$color-grey-dark;
+}

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page">
-    <header class="page__header header">
+    <header class="page__header header header--no-js">
       <a class="header__logo" href="./">
         <img class="header__logo-image" src="img/logo.png" width="185" height="96" alt="Логотип Седоны.">
       </a>
@@ -28,25 +28,25 @@
             <a class="site-navigation__link" href="form.html">Форма отзыва</a>
           </li>
           <li class="site-navigation__item">
-            <a class="site-navigation__link" href="https://htmlacademy.ru/intensive/adaptive">htmlacademy</a>
+            <a class="site-navigation__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="page__main main-index">
-      <div class="intro">
+      <div class="main-index__intro intro">
         <img src="img/intro-text.svg" alt="Надпись &#34;Welcome to the gorgeous Sedona. &#8220;Because the Grand Canyon sucks!&#8222;&#34;">
       </div>
 
-      <section class="advantages-section">
-        <div class="advantages-section__entrance entrance">
-          <h1 class="advantages-section__title entrance__title">Cедона &ndash; небольшой городок&nbsp;в&nbsp;Аризоне, заслуживающий&nbsp;большего!</h1>
-          <p class="advantages-section__text entrance__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      <section class="main-index__advantages advantages-section">
+        <div class="advantages-section__entrance">
+          <h1 class="advantages-section__title">Cедона &ndash; небольшой городок&nbsp;в&nbsp;Аризоне, заслуживающий&nbsp;большего!</h1>
+          <p class="advantages-section__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
 
         <ol class="advantages">
-          <li class="advantages__item advantages__item--illustrated">
+          <li class="advantages__item advantages__item--illustrated advantages__item--order-first">
             <div class="advantages__element-container advantage-element advantage-element--special">
               <h3 class="advantages__title advantage-element__title">Настоящий городок</h3>
               <p class="advantages__text advantage-element__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
@@ -55,7 +55,7 @@
           </li>
           <li class="advantages__item advantages__item--illustrated advantages__item--reversed">
             <div class="advantages__element-container advantage-element advantage-element--special">
-              <h3 class="advantages__title advantage-element__title">Там есть мост дьявола</h3>
+              <h3 class="advantages__title advantage-element__title">Там есть мост&nbsp;дьявола</h3>
               <p class="advantages__text advantage-element__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
             <img class="advantages__image" src="img/mobile/advantages-bridge-mobile.jpg" width="320" height="260" alt="Достопримечательность 'Мост дьявола'.">
@@ -72,7 +72,7 @@
             <h3 class="advantages__title advantage-element__title">Мало туристов</h3>
             <p class="advantages__text advantage-element__text">Большинство едет в гранд каньон и толпится там</p>
           </li>
-          <li class="advantages__item advantages__item--servises">
+          <li class="advantages__item advantages__item--servises advantages__item--order-second">
             <h3 class="visually-hidden">Услуги и товары</h3>
             <ul class="advantages__servises servises">
               <li class="servises__item servises__item--housing">

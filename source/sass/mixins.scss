@@ -18,7 +18,7 @@
   list-style-type: none;
 }
 
-@mixin base-horizontal-padding {
+@mixin base-horizontal-paddings {
   padding-left: var.$base-container-horizontal-padding;
   padding-right: var.$base-container-horizontal-padding;
 }
@@ -28,5 +28,5 @@
   flex-direction: column;
   align-items: center;
 
-  @include base-horizontal-padding;
+  @include base-horizontal-paddings;
 }
