@@ -1,10 +1,6 @@
 @use "../mixins.scss";
 @use "../variables.scss" as var;
 
-.advantages-section {
-  overflow-x: hidden;
-}
-
 .advantages-section__entrance {
   @include mixins.base-horizontal-paddings;
   position: relative;
