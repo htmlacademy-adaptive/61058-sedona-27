@@ -7,20 +7,6 @@
   min-height: var.$site-navigation-toggle-size;
 }
 
-.header--no-js {
-  @media (max-width: (var.$tablet-width - 1)) {
-    padding-bottom: var.$site-navigation-toggle-size;
-
-    .header__navigation {
-      position: static;
-    }
-
-    .header__logo {
-      top: calc(100% - var.$site-navigation-toggle-size);
-    }
-  }
-}
-
 .header__logo {
   position: absolute;
   top: 0;
@@ -29,16 +15,5 @@
 
   @media (min-width: var.$tablet-width) {
     z-index: 1;
-  }
-}
-
-.header__navigation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  @media (min-width: var.$tablet-width) {
-    position: static;
   }
 }
