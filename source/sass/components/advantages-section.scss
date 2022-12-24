@@ -17,16 +17,11 @@
     left: 50%;
     bottom: -5px;
     transform: translateX(-50%);
-    width: 100vw;
+    width: var.$tablet-width;
     height: 42px;
 
-    background-color: transparent;
-    background-image:
-      url("../../img/mobile/advantages-entrance-decoration.svg"),
-      linear-gradient(to bottom, #ffffff 5px, var.$color-blue-basic 5px);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 37px, 100%;
+    background-color: var.$color-blue-basic;
+    clip-path: polygon(0 0, 50% 37px, 100% 0, 100% 100%, 0 100%, 0 0);
 
     @media (min-width: var.$tablet-width) {
       display: none;

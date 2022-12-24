@@ -1,8 +1,27 @@
 @use "../variables.scss" as var;
 
 .page {
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: var.$font-primary;
   font-size: var.$font-size-default-mobile;
   line-height: var.$line-height-default-mobile;
   text-transform: uppercase;
+}
+
+.page__body {
+  background-color: var.$color-grey-basic;
+}
+
+.page__container {
+  display: flex;
+  flex-direction: column;
+  max-width: var.$desktop-width;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var.$color-white;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  overflow: hidden;
+}
+
+.page__main {
+  flex-grow: 1;
 }

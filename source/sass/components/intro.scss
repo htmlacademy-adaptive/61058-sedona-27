@@ -4,19 +4,32 @@
 .intro {
   @include mixins.base-centralizer;
 
+  position: relative;
   padding-top: 90px;
   padding-bottom: 85px;
 
   background-color: var.$color-background-intro;
-  background-image:
-    url("../../img/intro-decoration.svg"),
-    url("../../img/mobile/intro-mobile.jpg");
+  background-image: url("../img/mobile/intro-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: bottom, center;
-  background-size: 1200px 57px, cover;
+  background-position: center;
+  background-size: cover;
 
   &--secondary {
     padding-top: 52px;
     padding-bottom: 67px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1210px;
+    height: 63px;
+    background-image: url("../img/intro-decoration.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
   }
 }
