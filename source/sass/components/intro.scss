@@ -1,10 +1,10 @@
 @use "../mixins.scss";
 @use "../variables.scss" as var;
 
-$-padding-top-calc: calc(-100vw*13/448 + 1px*695/7);
-$-padding-bottom-calc: calc(100vw*5/448 + 1px*570/7);
-$-padding-top-calc-secondary: calc(100vw*43/448 + 1px*149/7);
-$-padding-bottom-calc-secondary: calc(100vw*25/224 + 1px*219/7);
+$-padding-top-calc: calc(-100vw * 13 / 448 + 1px * 695 / 7);
+$-padding-bottom-calc: calc(100vw * 5 / 448 + 1px * 570 / 7);
+$-padding-top-calc-secondary: calc(100vw * 43 / 448 + 1px * 149 / 7);
+$-padding-bottom-calc-secondary: calc(100vw * 25 / 224 + 1px * 219 / 7);
 $-padding-top: max(78px, $-padding-top-calc);
 $-padding-bottom: min(90px, $-padding-bottom-calc);
 $-padding-top-secondary: min(101px, $-padding-top-calc-secondary);
