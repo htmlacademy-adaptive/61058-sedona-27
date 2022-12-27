@@ -1,22 +1,31 @@
 @use "../mixins.scss";
 @use "../variables.scss" as var;
 
+$-padding-top-calc: calc(-100vw*13/448 + 1px*695/7);
+$-padding-bottom-calc: calc(100vw*5/448 + 1px*570/7);
+$-padding-top-calc-secondary: calc(100vw*43/448 + 1px*149/7);
+$-padding-bottom-calc-secondary: calc(100vw*25/224 + 1px*219/7);
+$-padding-top: max(78px, $-padding-top-calc);
+$-padding-bottom: min(90px, $-padding-bottom-calc);
+$-padding-top-secondary: min(101px, $-padding-top-calc-secondary);
+$-padding-bottom-secondary: min(120px, $-padding-bottom-calc-secondary);
+
 .intro {
   @include mixins.base-centralizer;
 
   position: relative;
-  padding-top: 90px;
-  padding-bottom: 85px;
+  padding-top: $-padding-top;
+  padding-bottom: $-padding-bottom;
 
   background-color: var.$color-background-intro;
-  background-image: url("../img/mobile/intro-mobile.jpg");
+  background-image: url("../img/desktop/intro-back.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
 
   &--secondary {
-    padding-top: 52px;
-    padding-bottom: 67px;
+    padding-top: $-padding-top-secondary;
+    padding-bottom: $-padding-bottom-secondary;
   }
 
   &::after {
@@ -32,4 +41,34 @@
     background-position: bottom;
     background-size: 100%;
   }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/desktop/intro-back@2x.jpg");
+  }
+
+  @media (max-width: var.$tablet-width) {
+    background-image: url("../img/tablet/intro-back.jpg");
+  }
+
+  @media (max-width: var.$tablet-width) and (min-resolution: 2dppx) {
+    background-image: url("../img/tablet/intro-back@2x.jpg");
+  }
+
+  @media (max-width: var.$mobile-width) {
+    background-image: url("../img/mobile/intro-back.jpg");
+  }
+
+  @media (max-width: var.$mobile-width) and (min-resolution: 2dppx) {
+    background-image: url("../img/mobile/intro-back@2x.jpg");
+  }
+}
+
+.intro__image {
+  width: 60vw;
+  min-width: 282px;
+  max-width: 461px;
+}
+
+.intro--secondary .intro__image {
+  min-width: 229px;
 }
