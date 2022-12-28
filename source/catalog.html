@@ -57,9 +57,13 @@
 
         <ul class="catalog">
           <li class="catalog__item catalog__item--main">
-            <article class="photo-card">
-              <img class="photo-card__image" src="img/mobile/catalog-photo-1-mobile.jpg" width="280" height="280"
+            <article class="catalog__card photo-card">
+              <picture class="photo-card__image-container">
+                <source media="(min-width: 769px)" srcset="img/desktop/catalog-photo-1.jpg 1x, img/desktop/catalog-photo-1@2x.jpg 2x">
+                <source media="(min-width: 560px)" srcset="img/tablet/catalog-photo-1.jpg 1x, img/tablet/catalog-photo-1@2x.jpg 2x">
+                <img class="photo-card__image photo-card__image--main" src="img/mobile/catalog-photo-1.jpg" width="280" height="280" srcset="img/mobile/catalog-photo-1@2x.jpg 2x"
                 alt="Автомобильная дорога в просторной местности во время заката.">
+              </picture>
               <div class="photo-card__content">
                 <h2 class="photo-card__title">Неродные просторы</h2>
                 <span class="photo-card__info">Автор фото: Борис</span>
@@ -77,9 +81,13 @@
             </article>
           </li>
           <li class="catalog__item">
-            <article class="photo-card">
-              <img class="photo-card__image" src="img/mobile/catalog-photo-2-mobile.jpg" width="280" height="280"
+            <article class="catalog__card photo-card">
+              <picture class="photo-card__image-container">
+                <source media="(min-width: 769px)" srcset="img/desktop/catalog-photo-2.jpg 1x, img/desktop/catalog-photo-2@2x.jpg 2x">
+                <source media="(min-width: 560px)" srcset="img/tablet/catalog-photo-2.jpg 1x, img/tablet/catalog-photo-2@2x.jpg 2x">
+                <img class="photo-card__image" src="img/mobile/catalog-photo-2.jpg" width="280" height="280" srcset="img/mobile/catalog-photo-2@2x.jpg 2x"
                 alt="Цветущий кактус на фоне красных скал.">
+              </picture>
               <div class="photo-card__content">
                 <h2 class="photo-card__title">Местная растительность</h2>
                 <span class="photo-card__info">Автор фото: Сергей</span>
@@ -97,9 +105,13 @@
             </article>
           </li>
           <li class="catalog__item">
-            <article class="photo-card photo-card--highlighted">
-              <img class="photo-card__image" src="img/mobile/catalog-photo-3-mobile.jpg" width="280" height="280"
+            <article class="catalog__card photo-card photo-card--highlighted">
+              <picture class="photo-card__image-container">
+                <source media="(min-width: 769px)" srcset="img/desktop/catalog-photo-3.jpg 1x, img/desktop/catalog-photo-3@2x.jpg 2x">
+                <source media="(min-width: 560px)" srcset="img/tablet/catalog-photo-3.jpg 1x, img/tablet/catalog-photo-3@2x.jpg 2x">
+                <img class="photo-card__image" src="img/mobile/catalog-photo-3.jpg" width="280" height="280" srcset="img/mobile/catalog-photo-3@2x.jpg 2x"
                 alt="Автомобильная дорога среди лесов с высоты причьего полета.">
+              </picture>
               <div class="photo-card__content">
                 <h2 class="photo-card__title">Дорога на север</h2>
                 <span class="photo-card__info">Автор фото: Петр</span>
@@ -117,9 +129,13 @@
             </article>
           </li>
           <li class="catalog__item">
-            <article class="photo-card">
-              <img class="photo-card__image" src="img/mobile/catalog-photo-4-mobile.jpg" width="280" height="280"
+            <article class="catalog__card photo-card">
+              <picture class="photo-card__image-container">
+                <source media="(min-width: 769px)" srcset="img/desktop/catalog-photo-4.jpg 1x, img/desktop/catalog-photo-4@2x.jpg 2x">
+                <source media="(min-width: 560px)" srcset="img/tablet/catalog-photo-4.jpg 1x, img/tablet/catalog-photo-4@2x.jpg 2x">
+                <img class="photo-card__image" src="img/mobile/catalog-photo-4.jpg" width="280" height="280" srcset="img/mobile/catalog-photo-4@2x.jpg 2x"
                 alt="Достопримечательность Мост Дьявола.">
+              </picture>
               <div class="photo-card__content">
                 <h2 class="photo-card__title">Мост Дьявола</h2>
                 <span class="photo-card__info">Автор фото: Антон</span>
