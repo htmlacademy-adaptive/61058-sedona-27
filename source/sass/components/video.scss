@@ -6,6 +6,13 @@
 
 .video__image {
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  object-fit: cover;
+
+  @media (min-width: var.$tablet-width) {
+    height: 500px;
+  }
 }
 
 .video__play {

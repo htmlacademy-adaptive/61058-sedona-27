@@ -28,17 +28,6 @@
     margin: 0;
   }
 
-  &::before {
-    content: "";
-    grid-row: span 2;
-
-    width: 40px;
-    height: 40px;
-
-    background-repeat: no-repeat;
-    background-position: left top;
-  }
-
   @media (min-width: var.$tablet-width) {
     display: flex;
     gap: 0;
@@ -48,10 +37,6 @@
     width: calc(100% / 3);
     margin: 0;
     padding: 60px var.$advantage-element-horizontal-padding-tablet;
-
-    &::before {
-      margin-bottom: 26px;
-    }
   }
 
   @media (min-width: var.$desktop-width) {
@@ -70,6 +55,19 @@
     font-size: 21px;
     line-height: 1.24;
     text-align: center;
+  }
+}
+
+.servises__icon {
+  width: 40px;
+  height: 40px;
+  grid-row: span 2;
+  order: -1;
+
+  @media (min-width: var.$tablet-width) {
+    width: 82px;
+    height: 72px;
+    margin-bottom: 26px;
   }
 }
 

@@ -66,9 +66,24 @@
   }
 }
 
-.advantages__image {
+.advantages__element-container {
+  flex-shrink: 0;
+}
+
+.advantages__image-container {
   flex-grow: 1;
+}
+
+.advantages__image {
+  width: 100%;
+  height: 260px;
   object-fit: cover;
+
+  @media (min-width: var.$tablet-width) {
+    width: 100%;
+    min-height: var.$advantages-element-min-height;
+    height: 100%;
+  }
 }
 
 .advantages__title {

@@ -7,6 +7,7 @@ $-text-max-width: 400px;
   @include mixins.base-centralizer;
   justify-content: center;
 
+  min-height: var.$advantages-element-min-height;
   padding-top: 24px;
   padding-bottom: 25px;
 

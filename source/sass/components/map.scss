@@ -1,5 +1,31 @@
 @use "../variables.scss" as var;
 
-.map {
+$-map-marker: radial-gradient(
+  var.$color-blue-secondary 0,
+  var.$color-blue-secondary 8px,
+  var.$color-white 8px,
+  var.$color-white 13px,
+  transparent 13px,
+);
+
+@mixin map-background($map-image) {
+  background-image:
+    $-map-marker,
+    $map-image;
+}
+
+.map__window {
+  display: block;
+  border: none;
+  width: 100%;
   background-color: var.$color-background-map;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 27px 27px, auto 100%;
+
+  @include map-background(url("../img/desktop/map.jpg"));
+
+  @media (min-resolution: 2dppx) {
+    @include map-background(url("../img/desktop/map@2x.jpg"));
+  }
 }

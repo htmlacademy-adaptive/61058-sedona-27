@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона | Фото и видео</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -12,7 +16,7 @@
   <div class="page__container">
     <header class="page__header header">
       <a class="header__logo" href="index.html">
-        <img src="img/logo.png" width="185" height="96" alt="Логотип Седоны.">
+        <img src="img/icons/logo.png" width="185" height="96" srcset="img/icons/logo@2x.png 2x" alt="Логотип Седоны.">
       </a>
 
       <nav class="header__navigation site-navigation site-navigation--no-js">
@@ -39,7 +43,7 @@
 
     <main class="page__main main-catalog">
       <div class="main-catalog__intro intro intro--secondary">
-        <img class="intro__text-image" src="img/intro-sedona.svg" width="229" height="39"
+        <img class="intro__image" src="img/intro-text-secondary.svg" width="229" height="39"
           alt="Надпись &#34;Sedona&#34;">
       </div>
 
@@ -53,9 +57,13 @@
 
         <ul class="catalog">
           <li class="catalog__item catalog__item--main">
-            <article class="photo-card">
-              <img class="photo-card__image" src="img/mobile/catalog-photo-1-mobile.jpg" width="280" height="280"
+            <article class="catalog__card photo-card">
+              <picture class="photo-card__image-container">
+                <source media="(min-width: 769px)" srcset="img/desktop/catalog-photo-1.jpg 1x, img/desktop/catalog-photo-1@2x.jpg 2x">
+                <source media="(min-width: 560px)" srcset="img/tablet/catalog-photo-1.jpg 1x, img/tablet/catalog-photo-1@2x.jpg 2x">
+                <img class="photo-card__image photo-card__image--main" src="img/mobile/catalog-photo-1.jpg" width="280" height="280" srcset="img/mobile/catalog-photo-1@2x.jpg 2x"
                 alt="Автомобильная дорога в просторной местности во время заката.">
+              </picture>
               <div class="photo-card__content">
                 <h2 class="photo-card__title">Неродные просторы</h2>
                 <span class="photo-card__info">Автор фото: Борис</span>
@@ -73,9 +81,13 @@
             </article>
           </li>
           <li class="catalog__item">
-            <article class="photo-card">
-              <img class="photo-card__image" src="img/mobile/catalog-photo-2-mobile.jpg" width="280" height="280"
+            <article class="catalog__card photo-card">
+              <picture class="photo-card__image-container">
+                <source media="(min-width: 769px)" srcset="img/desktop/catalog-photo-2.jpg 1x, img/desktop/catalog-photo-2@2x.jpg 2x">
+                <source media="(min-width: 560px)" srcset="img/tablet/catalog-photo-2.jpg 1x, img/tablet/catalog-photo-2@2x.jpg 2x">
+                <img class="photo-card__image" src="img/mobile/catalog-photo-2.jpg" width="280" height="280" srcset="img/mobile/catalog-photo-2@2x.jpg 2x"
                 alt="Цветущий кактус на фоне красных скал.">
+              </picture>
               <div class="photo-card__content">
                 <h2 class="photo-card__title">Местная растительность</h2>
                 <span class="photo-card__info">Автор фото: Сергей</span>
@@ -93,9 +105,13 @@
             </article>
           </li>
           <li class="catalog__item">
-            <article class="photo-card photo-card--highlighted">
-              <img class="photo-card__image" src="img/mobile/catalog-photo-3-mobile.jpg" width="280" height="280"
+            <article class="catalog__card photo-card photo-card--highlighted">
+              <picture class="photo-card__image-container">
+                <source media="(min-width: 769px)" srcset="img/desktop/catalog-photo-3.jpg 1x, img/desktop/catalog-photo-3@2x.jpg 2x">
+                <source media="(min-width: 560px)" srcset="img/tablet/catalog-photo-3.jpg 1x, img/tablet/catalog-photo-3@2x.jpg 2x">
+                <img class="photo-card__image" src="img/mobile/catalog-photo-3.jpg" width="280" height="280" srcset="img/mobile/catalog-photo-3@2x.jpg 2x"
                 alt="Автомобильная дорога среди лесов с высоты причьего полета.">
+              </picture>
               <div class="photo-card__content">
                 <h2 class="photo-card__title">Дорога на север</h2>
                 <span class="photo-card__info">Автор фото: Петр</span>
@@ -113,9 +129,13 @@
             </article>
           </li>
           <li class="catalog__item">
-            <article class="photo-card">
-              <img class="photo-card__image" src="img/mobile/catalog-photo-4-mobile.jpg" width="280" height="280"
+            <article class="catalog__card photo-card">
+              <picture class="photo-card__image-container">
+                <source media="(min-width: 769px)" srcset="img/desktop/catalog-photo-4.jpg 1x, img/desktop/catalog-photo-4@2x.jpg 2x">
+                <source media="(min-width: 560px)" srcset="img/tablet/catalog-photo-4.jpg 1x, img/tablet/catalog-photo-4@2x.jpg 2x">
+                <img class="photo-card__image" src="img/mobile/catalog-photo-4.jpg" width="280" height="280" srcset="img/mobile/catalog-photo-4@2x.jpg 2x"
                 alt="Достопримечательность Мост Дьявола.">
+              </picture>
               <div class="photo-card__content">
                 <h2 class="photo-card__title">Мост Дьявола</h2>
                 <span class="photo-card__info">Автор фото: Антон</span>
@@ -141,7 +161,7 @@
           раз!</p>
 
         <div class="presentation__video video">
-          <img class="video__image" src="img/mobile/catalog-video-mobile.jpg" width="280" height="177"
+          <img class="video__image" src="img/catalog-video.jpg" width="280" height="177" srcset="img/catalog-video@2x.jpg 2x"
             alt="Превью видео.">
           <a class="video__play" href="#">
             <span class="visually-hidden">Воспроизвести видео</span>
