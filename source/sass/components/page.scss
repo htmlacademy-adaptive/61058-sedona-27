@@ -14,6 +14,7 @@
 .page__container {
   display: flex;
   flex-direction: column;
+  min-width: var.$mobile-width;
   max-width: var.$desktop-width;
   min-height: 100vh;
   margin: 0 auto;
