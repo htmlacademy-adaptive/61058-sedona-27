@@ -3,7 +3,9 @@
 
 .services {
   @include mixins.list-style-reset;
-  @include mixins.base-horizontal-paddings;
+  @include mixins.base-horizontal-paddings(
+    var.$base-container-horizontal-padding-index,
+  );
 
   max-width: 550px;
   margin: 0 auto;
@@ -21,7 +23,7 @@
 .services__item {
   display: grid;
   grid-template-columns: 40px 1fr;
-  gap: 16px 8px;
+  gap: 16px 7px;
   margin-bottom: 25px;
 
   &:last-child {
@@ -36,27 +38,11 @@
     align-items: center;
     width: calc(100% / 3);
     margin: 0;
-    padding: 60px var.$advantage-element-horizontal-padding-tablet;
+    padding: 57px var.$advantage-element-horizontal-padding-tablet 61px;
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 69px var.$advantage-element-horizontal-padding-desktop;
-  }
-}
-
-.services__title {
-  margin-top: 8px;
-  margin-bottom: 0;
-  font-size: 18px;
-  line-height: 1.44;
-
-  @media (min-width: var.$tablet-width) {
-    margin-top: 0;
-    margin-bottom: 26px;
-
-    font-size: 21px;
-    line-height: 1.24;
-    text-align: center;
+    // padding: 60px var.$advantage-element-horizontal-padding-desktop;
   }
 }
 
@@ -68,8 +54,24 @@
 
   @media (min-width: var.$tablet-width) {
     width: 82px;
-    height: 72px;
-    margin-bottom: 26px;
+    height: 75px;
+    margin-bottom: 24px;
+  }
+}
+
+.services__title {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 1.44;
+
+  @media (min-width: var.$tablet-width) {
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    font-size: 21px;
+    line-height: 1.24;
+    text-align: center;
   }
 }
 
@@ -81,5 +83,35 @@
 
   @media (min-width: var.$tablet-width) {
     text-align: center;
+  }
+}
+
+.services__item--housing {
+  @media (min-width: var.$tablet-width) {
+    .services__icon {
+      width: 77px;
+      height: 77px;
+      margin-bottom: 21px;
+    }
+  }
+}
+
+.services__item--food {
+  @media (min-width: var.$tablet-width) {
+    .services__icon {
+      width: 82px;
+      height: 82px;
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.services__item--gift {
+  @media (min-width: var.$tablet-width) {
+    .services__icon {
+      width: 77px;
+      height: 77px;
+      margin-bottom: 14px;
+    }
   }
 }

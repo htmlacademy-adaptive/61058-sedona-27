@@ -7,9 +7,8 @@ $-text-max-width: 400px;
   @include mixins.base-centralizer;
   justify-content: center;
 
-  min-height: var.$advantages-element-min-height;
   padding-top: 24px;
-  padding-bottom: 25px;
+  padding-bottom: 26px;
 
   background-color: var.$color-grey-light;
 
@@ -22,8 +21,9 @@ $-text-max-width: 400px;
   }
 
   @media (min-width: var.$tablet-width) {
+    min-height: var.$advantages-element-min-height;
     width: calc(100% / 3);
-    padding: 42px var.$advantage-element-horizontal-padding-tablet;
+    padding: 28px var.$advantage-element-horizontal-padding-tablet;
   }
 
   @media (min-width: var.$desktop-width) {
@@ -39,6 +39,10 @@ $-text-max-width: 400px;
   font-size: 18px;
   line-height: 1.44;
   text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .advantage-element__text {

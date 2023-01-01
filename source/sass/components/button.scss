@@ -1,6 +1,7 @@
 @use "../variables.scss" as var;
 
 .button {
+  display: inline-block;
   margin: 0;
   padding: 16px 45px;
 

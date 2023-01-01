@@ -18,9 +18,9 @@
   list-style-type: none;
 }
 
-@mixin base-horizontal-paddings {
-  padding-left: var.$base-container-horizontal-padding;
-  padding-right: var.$base-container-horizontal-padding;
+@mixin base-horizontal-paddings($padding: var.$base-container-horizontal-padding) {
+  padding-left: $padding;
+  padding-right: $padding;
 }
 
 @mixin base-centralizer {

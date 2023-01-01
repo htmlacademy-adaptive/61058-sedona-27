@@ -1,0 +1,17 @@
+@use "../variables.scss" as var;
+
+.line-break {
+  &--tablet {
+    display: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: inline;
+    }
+  }
+}

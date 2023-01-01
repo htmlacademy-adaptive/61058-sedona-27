@@ -26,6 +26,10 @@
     order: 2;
   }
 
+  &--last {
+    padding-bottom: 28px;
+  }
+
   &::after {
     content: "";
 
@@ -39,7 +43,7 @@
   }
 
   &--illustrated,
-  &--servises,
+  &--services,
   &--last {
     &::after {
       display: none;
@@ -56,7 +60,7 @@
       flex-direction: row-reverse;
     }
 
-    &--servises {
+    &--services {
       width: 100%;
     }
 
@@ -68,6 +72,19 @@
 
 .advantages__element-container {
   flex-shrink: 0;
+
+  .advantages__item--order-first & {
+    padding-top: 34px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    &,
+    .advantages__item--order-first & {
+      padding-top: 52px;
+      padding-bottom: 31px;
+    }
+  }
 }
 
 .advantages__image-container {
@@ -111,6 +128,6 @@
   @media (min-width: var.$tablet-width) {
     font-size: 21px;
     line-height: 1.24;
-    padding: 0 28px;
+    padding: 0 20px;
   }
 }

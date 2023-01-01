@@ -4,7 +4,9 @@
 $-content-max-width: 458px;
 
 .offer {
-  @include mixins.base-centralizer;
+  @include mixins.base-horizontal-paddings(
+    var.$base-container-horizontal-padding-index,
+  );
 
   box-sizing: content-box;
   max-width: $-content-max-width;
@@ -13,7 +15,7 @@ $-content-max-width: 458px;
   padding-bottom: 49px;
 
   @media (min-width: var.$tablet-width) {
-    padding: 61px 0 58px;
+    padding: 56px 0 58px;
   }
 
   @media (min-width: var.$desktop-width) {
@@ -30,6 +32,7 @@ $-content-max-width: 458px;
 
   @media (min-width: var.$tablet-width) {
     font-size: 30px;
+    margin-bottom: 26px;
   }
 }
 
@@ -41,7 +44,8 @@ $-content-max-width: 458px;
 }
 
 .offer__find-hotel {
-  margin-top: 32px;
+  width: 100%;
+  margin-top: 33px;
 
   font-size: 21px;
   line-height: 1.24;
@@ -49,7 +53,7 @@ $-content-max-width: 458px;
   align-self: stretch;
 
   @media (min-width: var.$tablet-width) {
-    margin-top: 40px;
+    margin-top: 41px;
   }
 
   @media (min-width: var.$desktop-width) {
