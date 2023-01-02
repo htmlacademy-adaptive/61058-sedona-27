@@ -68,6 +68,16 @@
       display: none;
     }
   }
+
+  @media (min-width: var.$desktop-width) {
+    &:nth-child(3) {
+      padding-top: 65px;
+    }
+
+    &--last {
+      padding-bottom: 20px;
+    }
+  }
 }
 
 .advantages__element-container {
@@ -83,6 +93,13 @@
     .advantages__item--order-first & {
       padding-top: 52px;
       padding-bottom: 31px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    &,
+    .advantages__item--order-first & {
+      padding-bottom: 52px;
     }
   }
 }
@@ -123,11 +140,5 @@
 
   .advantages__item--illustrated &::after {
     color: var.$color-white;
-  }
-
-  @media (min-width: var.$tablet-width) {
-    font-size: 21px;
-    line-height: 1.24;
-    padding: 0 20px;
   }
 }

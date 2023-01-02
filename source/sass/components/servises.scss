@@ -42,7 +42,7 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    // padding: 60px var.$advantage-element-horizontal-padding-desktop;
+    padding: 67px var.$advantage-element-horizontal-padding-desktop;
   }
 }
 
@@ -104,6 +104,14 @@
       margin-bottom: 14px;
     }
   }
+
+  @media (min-width: var.$desktop-width) {
+    .services__icon {
+      width: 74px;
+      height: 74px;
+      margin-bottom: 25px;
+    }
+  }
 }
 
 .services__item--gift {
@@ -112,6 +120,14 @@
       width: 77px;
       height: 77px;
       margin-bottom: 14px;
+    }
+  }
+
+
+  @media (min-width: var.$desktop-width) {
+    .services__icon {
+      width: 95px;
+      margin-bottom: 25px;
     }
   }
 }

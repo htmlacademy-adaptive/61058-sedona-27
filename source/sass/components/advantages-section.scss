@@ -32,6 +32,10 @@
       display: none;
     }
   }
+
+  @media (min-width: var.$desktop-width) {
+    margin-bottom: 45px;
+  }
 }
 
 .advantages-section__title {
