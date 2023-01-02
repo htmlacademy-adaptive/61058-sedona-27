@@ -35,6 +35,14 @@ $-desktop-form-down-elements-max-width: 768px;
 .feedback-form__fieldset {
   border-bottom: var.$border-line;
 
+  &:first-of-type {
+    padding-bottom: 39px;
+  }
+
+  &:nth-of-type(2) {
+    padding-bottom: 34px;
+  }
+
   &--last {
     margin-bottom: 56px;
     padding-bottom: 0;
