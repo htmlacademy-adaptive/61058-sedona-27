@@ -53,4 +53,8 @@ $-text-content-max-width: 445px;
   @media (min-width: var.$tablet-width) {
     margin-top: 90px;
   }
+
+  @media (min-width: var.$desktop-width) {
+    margin-top: 85px;
+  }
 }

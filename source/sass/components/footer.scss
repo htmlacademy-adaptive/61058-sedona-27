@@ -19,7 +19,11 @@
 
   @media (min-width: var.$desktop-width) {
     padding-left: 120px;
-    padding-right: 136px;
+    padding-right: 120px;
+
+    &--index {
+      padding-right: 136px;
+    }
   }
 }
 
@@ -45,6 +49,12 @@
 
     .footer--index & {
       margin-left: 12px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    .footer--index & {
+      margin-left: 20px;
     }
   }
 }
