@@ -11,7 +11,10 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 36px 60px;
-    padding-right: 76px;
+
+    &--index {
+      padding-right: 76px;
+    }
   }
 
   @media (min-width: var.$desktop-width) {
@@ -38,7 +41,11 @@
 
   @media (min-width: var.$tablet-width) {
     margin-bottom: 0;
-    margin-left: 12px;
+    margin-right: 8px;
+
+    .footer--index & {
+      margin-left: 12px;
+    }
   }
 }
 
