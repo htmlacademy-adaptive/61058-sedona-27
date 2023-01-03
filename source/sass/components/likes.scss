@@ -1,13 +1,23 @@
+@use "../variables.scss" as var;
+
 .likes {
   display: flex;
   align-items: flex-end;
 
   color: inherit;
+
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 8px;
+  }
 }
 
 .likes__icon {
   margin-right: 14px;
   opacity: 0.3;
+
+  @media (min-width: var.$tablet-width) {
+    margin-right: 9px;
+  }
 }
 
 .likes__count {

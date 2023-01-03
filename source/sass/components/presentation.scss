@@ -18,7 +18,7 @@ $-text-content-max-width: 445px;
 .presentation__title {
   max-width: $-text-content-max-width;
   margin: 0 auto;
-  margin-bottom: 32px;
+  margin-bottom: 27px;
 
   font-size: 18px;
   line-height: 1.44;
@@ -27,6 +27,7 @@ $-text-content-max-width: 445px;
   @media (min-width: var.$tablet-width) {
     font-size: 30px;
     line-height: 1;
+    margin-bottom: 29px;
   }
 }
 
@@ -34,17 +35,26 @@ $-text-content-max-width: 445px;
 .presentation__text {
   max-width: $-text-content-max-width;
   margin: 0 auto;
+  padding: 0 10px;
 
   text-align: center;
   color: var.$color-grey-dark;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0;
+  }
 }
 
 .presentation__video {
   width: 100%;
   max-width: 800px;
-  margin: 38px auto 0;
+  margin: 39px auto 0;
 
   @media (min-width: var.$tablet-width) {
-    margin-top: 88px;
+    margin-top: 90px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-top: 85px;
   }
 }

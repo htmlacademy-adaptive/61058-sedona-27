@@ -5,6 +5,7 @@ $-fieldset-margin-bottom-tablet: 48px;
 $-fieldset-margin-bottom-desktop: 56px;
 $-legend-line-width: calc((100% - 400px) / 2);
 $-desktop-form-down-elements-max-width: 768px;
+$-contacts-fieldset-max-width: 466px;
 
 .feedback-form {
   border-top: var.$border-line;
@@ -35,6 +36,14 @@ $-desktop-form-down-elements-max-width: 768px;
 .feedback-form__fieldset {
   border-bottom: var.$border-line;
 
+  &:first-of-type {
+    padding-bottom: 39px;
+  }
+
+  &:nth-of-type(2) {
+    padding-bottom: 34px;
+  }
+
   &--last {
     margin-bottom: 56px;
     padding-bottom: 0;
@@ -51,13 +60,18 @@ $-desktop-form-down-elements-max-width: 768px;
       margin-bottom: 42px;
     }
 
-    &--name,
     &--contacts {
-      width: calc(50% - 1px);
+      width: min($-contacts-fieldset-max-width, calc(50% - 1px));
     }
 
     &--name {
       order: 1;
+      min-width: calc(50% - 1px);
+      max-width: calc(100% - $-contacts-fieldset-max-width - 1px);
+    }
+
+    &:nth-of-type(n) {
+      padding-bottom: 0;
     }
   }
 
@@ -168,4 +182,10 @@ $-desktop-form-down-elements-max-width: 768px;
   font-size: 12px;
   line-height: 1.75;
   color: var.$color-grey-dark-tr-60;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 8px;
+  }
 }

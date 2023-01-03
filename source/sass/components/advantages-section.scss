@@ -22,29 +22,34 @@
 
     background-color: var.$color-blue-basic;
     clip-path: polygon(0 0, 50% 37px, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
 
-    @media (min-width: var.$tablet-width) {
+  @media (min-width: var.$tablet-width) {
+    margin-bottom: 56px;
+    padding: 0;
+
+    &::after {
       display: none;
     }
   }
 
-  @media (min-width: var.$tablet-width) {
-    margin-bottom: 55px;
-    padding: 0;
+  @media (min-width: var.$desktop-width) {
+    margin-bottom: 45px;
   }
 }
 
 .advantages-section__title {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 
   font-size: 18px;
-  line-height: 1.44;
+  line-height: 1.5;
   text-align: center;
 
   @media (min-width: var.$tablet-width) {
     font-size: 21px;
     line-height: 1.24;
+    margin-bottom: 28px;
   }
 }
 

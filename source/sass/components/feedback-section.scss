@@ -22,7 +22,7 @@
 
   @media (min-width: var.$tablet-width) {
     padding: 0;
-    margin-bottom: 102px;
+    margin-bottom: 103px;
   }
 
   @media (min-width: var.$desktop-width) {
@@ -39,9 +39,13 @@
   text-align: center;
 
   @media (min-width: var.$tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 11px;
 
     font-size: 30px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin-bottom: 20px;
   }
 }
 
@@ -49,4 +53,5 @@
   margin: 0;
   text-align: center;
   color: var.$color-grey-dark;
+  line-height: 1.7;
 }

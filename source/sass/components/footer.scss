@@ -11,12 +11,19 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 36px 60px;
-    padding-right: 76px;
+
+    &--index {
+      padding-right: 76px;
+    }
   }
 
   @media (min-width: var.$desktop-width) {
     padding-left: 120px;
-    padding-right: 136px;
+    padding-right: 120px;
+
+    &--index {
+      padding-right: 136px;
+    }
   }
 }
 
@@ -38,6 +45,17 @@
 
   @media (min-width: var.$tablet-width) {
     margin-bottom: 0;
+    margin-right: 8px;
+
+    .footer--index & {
+      margin-left: 12px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    .footer--index & {
+      margin-left: 20px;
+    }
   }
 }
 
@@ -47,4 +65,5 @@
   align-items: center;
   gap: 12px;
   margin: 0;
+  color: inherit;
 }
