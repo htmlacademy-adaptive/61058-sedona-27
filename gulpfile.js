@@ -62,6 +62,8 @@ const copyImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
+// Webp
+
 const webp = () => {
   return gulp.src([
     'source/img/**/*.{jpg,png}',
@@ -83,6 +85,8 @@ export const webpSource = () => {
     }))
     .pipe(gulp.dest('source/img'))
 }
+
+// SVG
 
 const svg = () => {
   return gulp.src('source/img/**/*.svg', {base: 'source/img'})
