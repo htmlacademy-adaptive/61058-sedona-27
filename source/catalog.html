@@ -5,10 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона | Фото и видео</title>
+  <meta name="description"
+    content="Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -35,7 +39,8 @@
             <a class="site-navigation__link" href="form.html">Форма отзыва</a>
           </li>
           <li class="site-navigation__item">
-            <a class="site-navigation__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+            <a class="site-navigation__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML
+              Academy</a>
           </li>
         </ul>
       </nav>
@@ -59,10 +64,19 @@
           <li class="catalog__item catalog__item--main">
             <article class="catalog__card photo-card">
               <picture class="photo-card__image-container">
-                <source media="(min-width: 769px)" srcset="img/desktop/catalog-photo-1.jpg 1x, img/desktop/catalog-photo-1@2x.jpg 2x">
-                <source media="(min-width: 560px)" srcset="img/tablet/catalog-photo-1.jpg 1x, img/tablet/catalog-photo-1@2x.jpg 2x">
-                <img class="photo-card__image photo-card__image--main" src="img/mobile/catalog-photo-1.jpg" width="280" height="280" srcset="img/mobile/catalog-photo-1@2x.jpg 2x"
-                alt="Автомобильная дорога в просторной местности во время заката.">
+                <source type="image/webp" media="(min-width: 769px)"
+                  srcset="img/desktop/catalog-photo-1.webp 1x, img/desktop/catalog-photo-1@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 560px)"
+                  srcset="img/tablet/catalog-photo-1.webp 1x, img/tablet/catalog-photo-1@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/mobile/catalog-photo-1.webp 1x, img/mobile/catalog-photo-1@2x.webp 2x">
+                <source media="(min-width: 769px)"
+                  srcset="img/desktop/catalog-photo-1.jpg 1x, img/desktop/catalog-photo-1@2x.jpg 2x">
+                <source media="(min-width: 560px)"
+                  srcset="img/tablet/catalog-photo-1.jpg 1x, img/tablet/catalog-photo-1@2x.jpg 2x">
+                <img class="photo-card__image photo-card__image--main" src="img/mobile/catalog-photo-1.jpg" width="280"
+                  height="280" srcset="img/mobile/catalog-photo-1@2x.jpg 2x"
+                  alt="Автомобильная дорога в просторной местности во время заката.">
               </picture>
               <div class="photo-card__content">
                 <h2 class="photo-card__title">Неродные просторы</h2>
@@ -71,7 +85,7 @@
                 <a class="photo-card__likes likes" href="#">
                   <span class="visually-hidden">Поставить лайк</span>
                   <svg class="photo-card__likes-icon likes__icon" width="23" height="21" viewBox="0 0 23 21">
-                    <use href="img/vector/sprite.svg#like"/>
+                    <use href="img/vector/sprite.svg#like" />
                   </svg>
                   <span class="likes__count"><span class="visually-hidden">Количество лайков:</span>1350</span>
                 </a>
@@ -81,10 +95,19 @@
           <li class="catalog__item">
             <article class="catalog__card photo-card">
               <picture class="photo-card__image-container">
-                <source media="(min-width: 769px)" srcset="img/desktop/catalog-photo-2.jpg 1x, img/desktop/catalog-photo-2@2x.jpg 2x">
-                <source media="(min-width: 560px)" srcset="img/tablet/catalog-photo-2.jpg 1x, img/tablet/catalog-photo-2@2x.jpg 2x">
-                <img class="photo-card__image" src="img/mobile/catalog-photo-2.jpg" width="280" height="280" srcset="img/mobile/catalog-photo-2@2x.jpg 2x"
-                alt="Цветущий кактус на фоне красных скал.">
+                <source type="image/webp" media="(min-width: 769px)"
+                  srcset="img/desktop/catalog-photo-2.webp 1x, img/desktop/catalog-photo-2@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 560px)"
+                  srcset="img/tablet/catalog-photo-2.webp 1x, img/tablet/catalog-photo-2@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/mobile/catalog-photo-2.webp 1x, img/mobile/catalog-photo-2@2x.webp 2x">
+                <source media="(min-width: 769px)"
+                  srcset="img/desktop/catalog-photo-2.jpg 1x, img/desktop/catalog-photo-2@2x.jpg 2x">
+                <source media="(min-width: 560px)"
+                  srcset="img/tablet/catalog-photo-2.jpg 1x, img/tablet/catalog-photo-2@2x.jpg 2x">
+                <img class="photo-card__image" src="img/mobile/catalog-photo-2.jpg" width="280" height="280"
+                  srcset="img/mobile/catalog-photo-2@2x.jpg 2x" alt="Цветущий кактус на фоне красных скал."
+                  loading="lazy">
               </picture>
               <div class="photo-card__content">
                 <h2 class="photo-card__title">Местная растительность</h2>
@@ -93,7 +116,7 @@
                 <a class="photo-card__likes likes" href="#">
                   <span class="visually-hidden">Поставить лайк</span>
                   <svg class="photo-card__likes-icon likes__icon" width="23" height="21" viewBox="0 0 23 21">
-                    <use href="img/vector/sprite.svg#like"/>
+                    <use href="img/vector/sprite.svg#like" />
                   </svg>
                   <span class="likes__count"><span class="visually-hidden">Количество лайков:</span>143</span>
                 </a>
@@ -103,10 +126,19 @@
           <li class="catalog__item">
             <article class="catalog__card photo-card photo-card--highlighted">
               <picture class="photo-card__image-container">
-                <source media="(min-width: 769px)" srcset="img/desktop/catalog-photo-3.jpg 1x, img/desktop/catalog-photo-3@2x.jpg 2x">
-                <source media="(min-width: 560px)" srcset="img/tablet/catalog-photo-3.jpg 1x, img/tablet/catalog-photo-3@2x.jpg 2x">
-                <img class="photo-card__image" src="img/mobile/catalog-photo-3.jpg" width="280" height="280" srcset="img/mobile/catalog-photo-3@2x.jpg 2x"
-                alt="Автомобильная дорога среди лесов с высоты причьего полета.">
+                <source type="image/webp" media="(min-width: 769px)"
+                  srcset="img/desktop/catalog-photo-3.webp 1x, img/desktop/catalog-photo-3@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 560px)"
+                  srcset="img/tablet/catalog-photo-3.webp 1x, img/tablet/catalog-photo-3@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/mobile/catalog-photo-3.webp 1x, img/mobile/catalog-photo-3@2x.webp 2x">
+                <source media="(min-width: 769px)"
+                  srcset="img/desktop/catalog-photo-3.jpg 1x, img/desktop/catalog-photo-3@2x.jpg 2x">
+                <source media="(min-width: 560px)"
+                  srcset="img/tablet/catalog-photo-3.jpg 1x, img/tablet/catalog-photo-3@2x.jpg 2x">
+                <img class="photo-card__image" src="img/mobile/catalog-photo-3.jpg" width="280" height="280"
+                  srcset="img/mobile/catalog-photo-3@2x.jpg 2x"
+                  alt="Автомобильная дорога среди лесов с высоты причьего полета." loading="lazy">
               </picture>
               <div class="photo-card__content">
                 <h2 class="photo-card__title">Дорога на север</h2>
@@ -115,7 +147,7 @@
                 <a class="photo-card__likes likes" href="#">
                   <span class="visually-hidden">Поставить лайк</span>
                   <svg class="photo-card__likes-icon likes__icon" width="23" height="21" viewBox="0 0 23 21">
-                    <use href="img/vector/sprite.svg#like"/>
+                    <use href="img/vector/sprite.svg#like" />
                   </svg>
                   <span class="likes__count"><span class="visually-hidden">Количество лайков:</span>96</span>
                 </a>
@@ -125,10 +157,19 @@
           <li class="catalog__item">
             <article class="catalog__card photo-card">
               <picture class="photo-card__image-container">
-                <source media="(min-width: 769px)" srcset="img/desktop/catalog-photo-4.jpg 1x, img/desktop/catalog-photo-4@2x.jpg 2x">
-                <source media="(min-width: 560px)" srcset="img/tablet/catalog-photo-4.jpg 1x, img/tablet/catalog-photo-4@2x.jpg 2x">
-                <img class="photo-card__image" src="img/mobile/catalog-photo-4.jpg" width="280" height="280" srcset="img/mobile/catalog-photo-4@2x.jpg 2x"
-                alt="Достопримечательность Мост Дьявола.">
+                <source type="image/webp" media="(min-width: 769px)"
+                  srcset="img/desktop/catalog-photo-4.webp 1x, img/desktop/catalog-photo-4@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 560px)"
+                  srcset="img/tablet/catalog-photo-4.webp 1x, img/tablet/catalog-photo-4@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/mobile/catalog-photo-4.webp 1x, img/mobile/catalog-photo-4@2x.webp 2x">
+                <source media="(min-width: 769px)"
+                  srcset="img/desktop/catalog-photo-4.jpg 1x, img/desktop/catalog-photo-4@2x.jpg 2x">
+                <source media="(min-width: 560px)"
+                  srcset="img/tablet/catalog-photo-4.jpg 1x, img/tablet/catalog-photo-4@2x.jpg 2x">
+                <img class="photo-card__image" src="img/mobile/catalog-photo-4.jpg" width="280" height="280"
+                  srcset="img/mobile/catalog-photo-4@2x.jpg 2x" alt="Достопримечательность Мост Дьявола."
+                  loading="lazy">
               </picture>
               <div class="photo-card__content">
                 <h2 class="photo-card__title">Мост Дьявола</h2>
@@ -137,7 +178,7 @@
                 <a class="photo-card__likes likes" href="#">
                   <span class="visually-hidden">Поставить лайк</span>
                   <svg class="photo-card__likes-icon likes__icon" width="23" height="21" viewBox="0 0 23 21">
-                    <use href="img/vector/sprite.svg#like"/>
+                    <use href="img/vector/sprite.svg#like" />
                   </svg>
                   <span class="likes__count"><span class="visually-hidden">Количество лайков:</span>254</span>
                 </a>
@@ -153,8 +194,12 @@
           раз!</p>
 
         <div class="presentation__video video">
-          <img class="video__image" src="img/catalog-video.jpg" width="280" height="177" srcset="img/catalog-video@2x.jpg 2x"
-            alt="Превью видео.">
+          <img class="video__image" src="img/catalog-video.jpg" width="280" height="177" srcset="
+          img/catalog-video@2x.webp 2x,
+          img/catalog-video@2x.jpg 2x,
+          img/catalog-video.webp 1x,
+          img/catalog-video.jpg 1x,
+          " alt="Превью видео." loading="lazy">
           <a class="video__play" href="#">
             <span class="visually-hidden">Воспроизвести видео</span>
           </a>
@@ -170,7 +215,7 @@
           <a class="social__link" href="#" target="_blank">
             <span class="visually-hidden">Вконтакте</span>
             <svg width="24" height="24" aria-hidden="true" focusable="false">
-              <use href="img/vector/sprite.svg#vk"/>
+              <use href="img/vector/sprite.svg#vk" />
             </svg>
           </a>
         </li>
@@ -178,7 +223,7 @@
           <a class="social__link" href="#" target="_blank">
             <span class="visually-hidden">Телеграм</span>
             <svg width="24" height="24" aria-hidden="true" focusable="false">
-              <use href="img/vector/sprite.svg#telegram"/>
+              <use href="img/vector/sprite.svg#telegram" />
             </svg>
           </a>
         </li>
@@ -186,7 +231,7 @@
           <a class="social__link" href="#" target="_blank">
             <span class="visually-hidden">YouTube</span>
             <svg width="24" height="24" aria-hidden="true" focusable="false">
-              <use href="img/vector/sprite.svg#youtube"/>
+              <use href="img/vector/sprite.svg#youtube" />
             </svg>
           </a>
         </li>
@@ -195,7 +240,7 @@
       <a class="footer__maid-in" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         Разработано
         <svg class="footer__logo" width="27" height="35" role="img" aria-label="HTML Academy">
-          <use href="img/vector/sprite.svg#htmlacademy-logo"/>
+          <use href="img/vector/sprite.svg#htmlacademy-logo" />
         </svg>
       </a>
     </footer>

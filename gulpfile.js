@@ -7,6 +7,7 @@ import rename from 'gulp-rename';
 import csso from 'postcss-csso';
 import htmlmin from 'gulp-htmlmin';
 import terser from "gulp-terser";
+import jsonmin from 'gulp-jsonmin';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgo';
 import svgstore from 'gulp-svgstore';
@@ -38,7 +39,7 @@ const html = () => {
 
 // Scripts
 
-export const scripts = () => {
+const scripts = () => {
   return gulp.src('source/js/main.js')
     .pipe(terser())
     .pipe(rename('main.min.js'))
@@ -89,7 +90,10 @@ export const webpSource = () => {
 // SVG
 
 const svg = () => {
-  return gulp.src('source/img/**/*.svg', {base: 'source/img'})
+  return gulp.src([
+    'source/img/**/*.svg',
+    '!source/img/icons/*.svg',
+  ], {base: 'source/img'})
     .pipe(svgo({
       plugins: [
         {
@@ -122,9 +126,16 @@ const copy = () => {
   return gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
-    'source/manifest.webmanifest',
   ], {base: 'source'})
     .pipe(gulp.dest('build'))
+}
+
+// JSON
+
+const jsonMinify = () => {
+  return gulp.src('source/manifest.webmanifest')
+  .pipe(jsonmin())
+  .pipe(gulp.dest('build'))
 }
 
 // Clean
@@ -147,12 +158,19 @@ const server = (done) => {
   done();
 }
 
+// Reload
+
+const reload = (done) => {
+  browser.reload();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build
@@ -165,10 +183,15 @@ export const build = gulp.series(
     html,
     styles,
     scripts,
+    jsonMinify,
     svg,
     sprite,
     webp,
   ),
+  gulp.series(
+    server,
+    watcher,
+  )
 )
 
 // Default
@@ -181,6 +204,7 @@ export default gulp.series(
     html,
     styles,
     scripts,
+    jsonMinify,
     sprite,
   ),
   gulp.series(
