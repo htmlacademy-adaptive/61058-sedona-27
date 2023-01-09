@@ -17,12 +17,12 @@
 
 <body class="page__body">
   <div class="page__container">
-    <header class="page__header header">
+    <header class="header">
       <a class="header__logo" href="./">
         <img src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
       </a>
 
-      <nav class="header__navigation site-navigation site-navigation--no-js">
+      <nav class="site-navigation site-navigation--no-js">
         <button class="site-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -58,10 +58,10 @@
         </div>
 
         <ol class="advantages">
-          <li class="advantages__item advantages__item--illustrated advantages__item--order-first">
+          <li class="advantages__item advantages__item--illustrated">
             <div class="advantages__element-container advantage-element advantage-element--special">
-              <h2 class="advantages__title advantage-element__title">Настоящий городок</h2>
-              <p class="advantages__text advantage-element__text">Седона не аттракцион для туристов, там&nbsp;течет своя
+              <h2 class="advantage-element__title">Настоящий городок</h2>
+              <p class="advantage-element__text">Седона не аттракцион для туристов, там&nbsp;течет своя
                 жизнь</p>
             </div>
 
@@ -74,11 +74,34 @@
               <img class="advantages__image" src="img/mobile/advantages-city.jpg" width="320" height="260" srcset="img/mobile/advantages-city@2x.jpg 2x"
               alt="Окрестности города Седоны.">
             </picture>
+
+            <ul class="services">
+              <li class="services__item">
+                <h3 class="services__title">Жилье</h3>
+                <p class="services__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                <svg class="services__icon" width="40" height="40" aria-hidden="true" focusable="false">
+                  <use href="img/vector/sprite.svg#services-house"/>
+                </svg>
+              </li>
+              <li class="services__item">
+                <h3 class="services__title">Еда</h3>
+                <p class="services__text">Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
+                <svg class="services__icon" width="40" height="40" aria-hidden="true" focusable="false">
+                  <use href="img/vector/sprite.svg#services-food"/>
+                </svg>
+              </li>
+              <li class="services__item">
+                <h3 class="services__title">Сувениры</h3>
+                <p class="services__text">Не только китайского,&nbsp;<br class="line-break line-break--tablet"> но&nbsp;и местного производства!</p>
+                <svg class="services__icon" width="40" height="40" aria-hidden="true" focusable="false">
+                  <use href="img/vector/sprite.svg#services-gift"/>
+                </svg>
+              </li>
           </li>
           <li class="advantages__item advantages__item--illustrated advantages__item--reversed">
             <div class="advantages__element-container advantage-element advantage-element--special">
-              <h2 class="advantages__title advantage-element__title">Там&nbsp;есть Мост&nbsp;Дьявола</h2>
-              <p class="advantages__text advantage-element__text">Да, по нему можно пройти! <br class="line-break line-break--desktop"> Если вы осмелитесь, конечно
+              <h2 class="advantage-element__title">Там&nbsp;есть Мост&nbsp;Дьявола</h2>
+              <p class="advantage-element__text">Да, по нему можно пройти!&nbsp;<br class="line-break line-break--desktop"> Если вы осмелитесь, конечно
               </p>
             </div>
             <picture class="advantages__image-container">
@@ -92,42 +115,16 @@
             </picture>
           </li>
           <li class="advantages__item advantage-element">
-            <h2 class="advantages__title advantage-element__title">Небольшая площадь</h2>
-            <p class="advantages__text advantage-element__text">Все интересные места находятся очень близко</p>
+            <h2 class="advantage-element__title">Небольшая площадь</h2>
+            <p class="advantage-element__text">Все интересные места находятся очень близко</p>
           </li>
           <li class="advantages__item advantage-element">
-            <h2 class="advantages__title advantage-element__title">Красивая дорога</h2>
-            <p class="advantages__text advantage-element__text">Ехать в Седону из Лас-Вегаса <br class="line-break line-break--mobile"> совсем <br class="line-break line-break--tablet"> не&nbsp;скучно!</p>
+            <h2 class="advantage-element__title">Красивая дорога</h2>
+            <p class="advantage-element__text">Ехать в Седону из Лас-Вегаса&nbsp;<br class="line-break line-break--mobile"> совсем <br class="line-break line-break--tablet"> не&nbsp;скучно!</p>
           </li>
-          <li class="advantages__item advantages__item--last advantage-element">
-            <h2 class="advantages__title advantage-element__title">Мало туристов</h2>
-            <p class="advantages__text advantage-element__text">Большинство едет в гранд каньон<br class="line-break line-break--mobile"> и толпится там</p>
-          </li>
-          <li class="advantages__item advantages__item--services advantages__item--order-second">
-            <h2 class="visually-hidden">Услуги и товары</h2>
-            <ul class="advantages__services services">
-              <li class="services__item services__item--housing">
-                <h3 class="services__title">Жилье</h3>
-                <p class="services__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-                <svg class="services__icon" width="40" height="40" aria-hidden="true" focusable="false">
-                  <use href="img/vector/sprite.svg#services-house"/>
-                </svg>
-              </li>
-              <li class="services__item services__item--food">
-                <h3 class="services__title">Еда</h3>
-                <p class="services__text">Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
-                <svg class="services__icon" width="40" height="40" aria-hidden="true" focusable="false">
-                  <use href="img/vector/sprite.svg#services-food"/>
-                </svg>
-              </li>
-              <li class="services__item services__item--gift">
-                <h3 class="services__title">Сувениры</h3>
-                <p class="services__text">Не только китайского,<br class="line-break line-break--desktop"> но&nbsp;и местного производства!</p>
-                <svg class="services__icon" width="40" height="40" aria-hidden="true" focusable="false">
-                  <use href="img/vector/sprite.svg#services-gift"/>
-                </svg>
-              </li>
-            </ul>
+          <li class="advantages__item advantage-element">
+            <h2 class="advantage-element__title">Мало туристов</h2>
+            <p class="advantage-element__text">Большинство едет в гранд каньон&nbsp;<br class="line-break line-break--mobile"> и толпится там</p>
           </li>
         </ol>
       </section>
@@ -147,7 +144,7 @@
         title="Седона на карте"></iframe>
       </section>
     </main>
-    <footer class="page__footer footer footer--index">
+    <footer class="footer">
       <p class="footer__hashtag">#visitsedona</p>
 
       <ul class="footer__social social" aria-label="Социальные сети.">

@@ -42,7 +42,7 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 67px var.$advantage-element-horizontal-padding-desktop;
+    padding: 67px var.$advantage-element-horizontal-padding-desktop 71px;
   }
 }
 
@@ -83,51 +83,5 @@
 
   @media (min-width: var.$tablet-width) {
     text-align: center;
-  }
-}
-
-.services__item--housing {
-  @media (min-width: var.$tablet-width) {
-    .services__icon {
-      width: 77px;
-      height: 77px;
-      margin-bottom: 21px;
-    }
-  }
-}
-
-.services__item--food {
-  @media (min-width: var.$tablet-width) {
-    .services__icon {
-      width: 82px;
-      height: 82px;
-      margin-bottom: 14px;
-    }
-  }
-
-  @media (min-width: var.$desktop-width) {
-    .services__icon {
-      width: 74px;
-      height: 74px;
-      margin-bottom: 25px;
-    }
-  }
-}
-
-.services__item--gift {
-  @media (min-width: var.$tablet-width) {
-    .services__icon {
-      width: 77px;
-      height: 77px;
-      margin-bottom: 14px;
-    }
-  }
-
-
-  @media (min-width: var.$desktop-width) {
-    .services__icon {
-      width: 95px;
-      margin-bottom: 25px;
-    }
   }
 }

@@ -23,10 +23,17 @@
   padding-right: $padding;
 }
 
-@mixin base-centralizer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@mixin font-14 {
+  font-size: 14px;
+  line-height: 1.5;
+}
 
-  @include base-horizontal-paddings;
+@mixin font-18 {
+  font-size: 18px;
+  line-height: 1.44;
+}
+
+@mixin font-21 {
+  font-size: 21px;
+  line-height: 1.24;
 }

@@ -149,7 +149,7 @@ $-contacts-fieldset-max-width: 466px;
 }
 
 .feedback-form__container {
-  @include mixins.base-centralizer;
+  @include mixins.base-horizontal-paddings;
   width: 100%;
   max-width: $-desktop-form-down-elements-max-width;
   margin: 0 auto;

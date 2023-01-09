@@ -2,7 +2,10 @@
 @use "../variables.scss" as var;
 
 .footer {
-  @include mixins.base-centralizer;
+  @include mixins.base-horizontal-paddings;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   padding-top: 28px;
   padding-bottom: 23px;
@@ -10,20 +13,12 @@
   @media (min-width: var.$tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 36px 60px;
-
-    &--index {
-      padding-right: 76px;
-    }
+    padding: 36px var.$tablet-base-horizontal-padding;
   }
 
   @media (min-width: var.$desktop-width) {
-    padding-left: 120px;
-    padding-right: 120px;
-
-    &--index {
-      padding-right: 136px;
-    }
+    padding-left: var.$desktop-base-horizontal-padding;
+    padding-right: var.$desktop-base-horizontal-padding;
   }
 }
 
@@ -31,8 +26,7 @@
   margin: 0;
   margin-bottom: 34px;
 
-  font-size: 21px;
-  line-height: 1.24;
+  @include mixins.font-21;
   font-weight: 700;
 
   @media (min-width: var.$tablet-width) {
@@ -45,17 +39,6 @@
 
   @media (min-width: var.$tablet-width) {
     margin-bottom: 0;
-    margin-right: 8px;
-
-    .footer--index & {
-      margin-left: 12px;
-    }
-  }
-
-  @media (min-width: var.$desktop-width) {
-    .footer--index & {
-      margin-left: 20px;
-    }
   }
 }
 
