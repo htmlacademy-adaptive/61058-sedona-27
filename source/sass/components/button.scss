@@ -1,20 +1,24 @@
 @use "../variables.scss" as var;
+@use "../mixins.scss";
 
 .button {
   display: inline-block;
   margin: 0;
   padding: 16px 45px;
 
-  font-family: inherit;
-  font-size: 18px;
-  line-height: 1.44;
+  @include mixins.font-18;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  color: var.$color-white;
-
   border: none;
-  background-color: var.$color-blue-basic;
-
   cursor: pointer;
+
+
+  @include mixins.blue-intaractive-element;
+
+  &:disabled {
+    background-color: var.$color-grey-rare-2;
+    color: var.$color-white;
+    cursor: default;
+  }
 }

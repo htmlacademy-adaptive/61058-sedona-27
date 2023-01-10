@@ -37,3 +37,36 @@
   padding-left: $padding;
   padding-right: $padding;
 }
+
+@mixin smooth-transition($transition-duration: 0.2s) {
+  transition: all $transition-duration ease;
+}
+
+@mixin blue-intaractive-element {
+  @include smooth-transition;
+  background-color: var.$color-blue-basic;
+  color: var.$color-white;
+
+  &:hover {
+    background-color: var.$color-blue-hover;
+  }
+
+  &:active {
+    background-color: var.$color-blue-active;
+    color: rgba(var.$color-white, 0.3);
+  }
+}
+
+@mixin intaractive-element {
+  @include smooth-transition;
+
+  color: inherit;
+
+  &:hover {
+    color: var.$color-blue-basic;
+  }
+
+  &:active {
+    color: var.$color-grey-rare-5;
+  }
+}
