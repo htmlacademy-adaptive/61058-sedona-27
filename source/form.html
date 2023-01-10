@@ -14,7 +14,7 @@
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <!-- Проверяет поддержку WebP -->
-  <script>document.addEventListener("DOMContentLoaded",function(){testWebP(document.body)});function testWebP(A){let e=new Image;e.src="data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA",e.onload=e.onerror=function(){2===e.height&&A.classList.add("webp")}}</script>
+  <script>document.addEventListener("DOMContentLoaded",function(){testWebP(document.body)});function testWebP(e){let A=new Image;A.src="data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA",A.onload=A.onerror=function(){2===A.height?e.classList.add("webp"):e.classList.add("no-webp")}}</script>
 
   <link rel="stylesheet" href="css/style.min.css">
 </head>

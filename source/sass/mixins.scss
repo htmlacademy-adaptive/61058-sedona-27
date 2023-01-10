@@ -18,11 +18,6 @@
   list-style-type: none;
 }
 
-@mixin base-horizontal-paddings($padding: var.$base-container-horizontal-padding) {
-  padding-left: $padding;
-  padding-right: $padding;
-}
-
 @mixin font-14 {
   font-size: 14px;
   line-height: 1.5;
@@ -36,4 +31,9 @@
 @mixin font-21 {
   font-size: 21px;
   line-height: 1.24;
+}
+
+@mixin base-horizontal-paddings($padding: var.$base-container-horizontal-padding) {
+  padding-left: $padding;
+  padding-right: $padding;
 }

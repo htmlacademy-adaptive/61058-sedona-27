@@ -14,18 +14,61 @@ $-map-marker: radial-gradient(
     $map-image;
 }
 
+.webp .map__window {
+  --bg-image: url("../img/desktop/map.webp");
+
+  @media (min-resolution: 2dppx) {
+    --bg-image: url("../img/desktop/map@2x.webp");
+  }
+
+  @media (max-width: var.$tablet-width) {
+    --bg-image: url("../img/tablet/map.webp");
+  }
+
+  @media (max-width: var.$tablet-width) and (min-resolution: 2dppx) {
+    --bg-image: url("../img/tablet/map@2x.webp");
+  }
+
+  @media (max-width: var.$mobile-min-width) {
+    --bg-image: url("../img/mobile/map.webp");
+  }
+
+  @media (max-width: var.$mobile-min-width) and (min-resolution: 2dppx) {
+    --bg-image: url("../img/mobile/map@2x.webp");
+  }
+}
+
+.no-webp .map__window {
+  --bg-image: url("../img/desktop/map.jpg");
+
+  @media (min-resolution: 2dppx) {
+    --bg-image: url("../img/desktop/map@2x.jpg");
+  }
+
+  @media (max-width: var.$tablet-width) {
+    --bg-image: url("../img/tablet/map.jpg");
+  }
+
+  @media (max-width: var.$tablet-width) and (min-resolution: 2dppx) {
+    --bg-image: url("../img/tablet/map@2x.jpg");
+  }
+
+  @media (max-width: var.$mobile-min-width) {
+    --bg-image: url("../img/mobile/map.jpg");
+  }
+
+  @media (max-width: var.$mobile-min-width) and (min-resolution: 2dppx) {
+    --bg-image: url("../img/mobile/map@2x.jpg");
+  }
+}
+
 .map__window {
   display: block;
   border: none;
   width: 100%;
-  background-color: var.$color-background-map;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 27px 27px, auto 100%;
 
-  @include map-background(url("../img/desktop/map.jpg"));
-
-  @media (min-resolution: 2dppx) {
-    @include map-background(url("../img/desktop/map@2x.jpg"));
-  }
+  @include map-background(var(--bg-image));
 }
