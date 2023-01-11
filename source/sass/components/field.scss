@@ -29,4 +29,11 @@
     background-color: var.$color-white;
     border-color: var.$color-grey-rare-2;
   }
+
+  &:disabled {
+    pointer-events: none;
+    background-color: var.$color-grey-rare-2;
+    border-color: var.$color-grey-rare-2;
+    opacity: 0.3;
+  }
 }

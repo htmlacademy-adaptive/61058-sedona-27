@@ -7,12 +7,13 @@
   padding: 16px 45px;
 
   @include mixins.font-18;
+  font-family: inherit;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   border: none;
+  word-wrap: break-word;
   cursor: pointer;
-
 
   @include mixins.blue-intaractive-element;
 

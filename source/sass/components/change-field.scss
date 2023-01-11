@@ -8,8 +8,8 @@ $-field-marker-size: 46px;
   grid-template-columns: $-field-marker-size 1fr;
   column-gap: 16px;
   align-items: center;
-  font-size: 18px;
-  line-height: 1.44;
+
+  @include mixins.font-18;
   font-weight: 700;
   text-transform: none;
   cursor: pointer;
@@ -25,17 +25,18 @@ $-field-marker-size: 46px;
 
   &--radio {
     &::before {
-      content: "";
       border-radius: 50%;
       border: 15px solid var.$color-grey-basic;
     }
 
-    &:hover::before {
+    &:hover::before,
+    .change-field__input:focus-visible + &::before {
       border-color: var.$color-grey-rare-2;
       background-color: var.$color-grey-rare-2;
     }
 
-    &:active::before {
+    &:active::before,
+    .change-field__input:focus-visible:active + &::before {
       border-color: var.$color-grey-rare-6;
       background-color: var.$color-grey-rare-6;
     }
@@ -44,7 +45,8 @@ $-field-marker-size: 46px;
       background-color: var.$color-grey-dark;
     }
 
-    .change-field__input:checked + &:active::before {
+    .change-field__input:checked:active + &::before,
+    .change-field__input:checked:focus-visible:active + &::before {
       background-color: var.$color-grey-rare-7;
     }
   }
@@ -71,11 +73,13 @@ $-field-marker-size: 46px;
       @include mixins.smooth-transition;
     }
 
-    &:hover::before {
+    &:hover::before,
+    .change-field__input:focus-visible + &::before {
       background-color: var.$color-grey-rare-2;
     }
 
-    &:active::before {
+    &:active::before,
+    .change-field__input:focus-visible:active + &::before {
       background-color: var.$color-grey-rare-6;
     }
 
@@ -83,8 +87,22 @@ $-field-marker-size: 46px;
       opacity: 1;
     }
 
-    .change-field__input:checked + &:active::after {
+    .change-field__input:checked:active + &::after {
       opacity: 0.3;
     }
+  }
+
+  .change-field__input:focus-visible + & {
+    outline: 4px solid var.$color-grey-rare-2;
+    outline-offset: 4px;
+  }
+
+  .change-field__input:focus-visible:active + & {
+    outline-color: var.$color-grey-rare-6;
+  }
+
+  .change-field__input:disabled + & {
+    pointer-events: none;
+    opacity: 0.3;
   }
 }

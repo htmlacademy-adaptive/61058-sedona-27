@@ -3,10 +3,8 @@
 
 .fieldset {
   position: relative;
-
   margin: 0;
   padding: 0 var.$base-container-horizontal-padding 24px;
-
   border: none;
 
   @media (min-width: var.$tablet-width) {
@@ -20,16 +18,15 @@
   padding-top: 24px;
   padding-bottom: 20px;
 
-  font-size: 18px;
-  line-height: 1.44;
+  @include mixins.font-18;
   font-weight: 700;
   text-align: center;
 
   @media (min-width: var.$tablet-width) {
     padding: 0;
     margin-bottom: 28px;
-    font-size: 21px;
-    line-height: 1.24;
+
+    @include mixins.font-21;
   }
 }
 
@@ -86,6 +83,10 @@
 
 .fieldset__textarea {
   width: 100%;
-  min-height: 160px;
+  min-height: 150px;
   resize: none;
+
+  @media (min-width: var.$tablet-width) {
+    min-height: 160px;
+  }
 }

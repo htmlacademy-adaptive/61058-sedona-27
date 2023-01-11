@@ -155,9 +155,9 @@ $-contacts-fieldset-max-width: 466px;
   margin: 0 auto;
 
   @media (min-width: var.$tablet-width) {
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
     padding: 0;
     order: 3;
   }
@@ -167,8 +167,7 @@ $-contacts-fieldset-max-width: 466px;
   width: 100%;
   margin-bottom: 3px;
 
-  font-size: 21px;
-  line-height: 1.24;
+  @include mixins.font-21;
 
   @media (min-width: var.$tablet-width) {
     width: 50%;
@@ -177,6 +176,8 @@ $-contacts-fieldset-max-width: 466px;
 }
 
 .feedback-form__note {
+  display: block;
+  width: fit-content;
   margin-left: auto;
 
   font-size: 12px;
@@ -184,8 +185,7 @@ $-contacts-fieldset-max-width: 466px;
   color: var.$color-grey-dark-tr-60;
 
   @media (min-width: var.$tablet-width) {
-    font-size: 14px;
-    line-height: 1.5;
+    @include mixins.font-14;
     margin-top: 8px;
   }
 }
