@@ -1,46 +1,93 @@
 @use "../variables.scss" as var;
+@use "../mixins.scss";
 
 .popup {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
   display: none;
+  justify-content: center;
+  align-items: center;
+  min-width: var.$mobile-min-width;
+
+  background-color: var.$color-black-tr-30;
+
+  &--open {
+    display: flex;
+  }
+
+  // Variables
+  &--success {
+    --content-padding: 39px 42px 51px;
+    --button-wrapper-padding: 20px;
+    --button-wrapper-bg: #{var.$color-grey-basic};
+    --inner-max-width: 640px;
+  }
+
+  &--error {
+    --content-padding: 44px 42px 9px;
+    --button-wrapper-padding: 20px 70px 35px;
+    --button-wrapper-bg: transparent;
+    --inner-max-width: 400px;
+  }
+
+  @media (min-width: var.$catalog-tablet-min-width) {
+    &--success {
+      --content-padding: 44px 98px 51px;
+      --button-wrapper-padding: 44px 90px;
+    }
+
+    &--error {
+      --button-wrapper-padding: 40px 64px 49px;
+    }
+  }
 }
 
 .popup__inner {
+  width: 100%;
+  max-width: var(--inner-max-width);
+  background-color: var.$color-white;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
 .popup__content {
-  display: flex;
-  flex-direction: column;
-
-  padding: 45px 42px 8px;
+  padding: var(--content-padding);
 }
 
 .popup__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
-  font-size: 18px;
-  line-height: 1.44;
+  @include mixins.font-18;
   text-align: center;
+
+  @media (min-width: var.$catalog-tablet-min-width) {
+    font-size: 30px;
+    line-height: 1.35;
+  }
 }
 
 .popup__message {
   margin: 0;
-
   text-align: center;
 }
 
 .popup__button-wrapper {
-  padding: 20px;
-
-  .popup--success & {
-    background-color: var.$color-grey-basic;
-  }
+  padding: var(--button-wrapper-padding);
+  background-color: var(--button-wrapper-bg);
 }
 
 .popup__close {
   display: block;
+  width: 100%;
+  max-width: 458px;
   margin: 0 auto;
-  padding-left: 64px;
-  padding-right: 64px;
+
+  @media (min-width: var.$catalog-tablet-min-width) {
+    @include mixins.font-21;
+  }
 }

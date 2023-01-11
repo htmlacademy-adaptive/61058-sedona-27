@@ -67,13 +67,13 @@
 
             <ul class="feedback-form__list fieldset__list">
               <li class="fieldset__item text-field">
-                <label class="text-field__label" for="feedback-name">Имя<sup class="super-text">*</sup>:</label>
+                <label class="text-field__label" for="feedback-name">Имя*:</label>
                 <input class="text-field__input field" type="text" name="feedback-name" id="feedback-name" value="Пётр"
                   placeholder="Имя" required>
               </li>
 
               <li class="fieldset__item text-field">
-                <label class="text-field__label" for="feedback-surname">Фамилия<sup class="super-text">*</sup>:</label>
+                <label class="text-field__label" for="feedback-surname">Фамилия*:</label>
                 <input class="text-field__input field" type="text" name="feedback-surname" id="feedback-surname"
                   value="Пустота" placeholder="Фамилия" required>
               </li>
@@ -92,8 +92,7 @@
 
             <ul class="feedback-form__list fieldset__list">
               <li class="fieldset__item text-field">
-                <label class="text-field__label" for="feedback-phone-number">Контактный телефон<sup
-                    class="super-text">*</sup>:</label>
+                <label class="text-field__label" for="feedback-phone-number">Контактный телефон*:</label>
                 <div class="text-field__input-container text-field__input-container--telephone">
                   <input class="text-field__input field" type="tel" name="feedback-phone-number"
                     id="feedback-phone-number" placeholder="Введите телефон" required>
@@ -101,8 +100,7 @@
               </li>
 
               <li class="fieldset__item text-field">
-                <label class="text-field__label" for="feedback-email">Электронная почта<sup
-                    class="super-text">*</sup>:</label>
+                <label class="text-field__label" for="feedback-email">Электронная почта*:</label>
                 <div class="text-field__input-container text-field__input-container--email">
                   <input class="text-field__input field" type="email" name="feedback-email" id="feedback-email"
                     placeholder="Введите e-mail" required>
@@ -184,7 +182,7 @@
 
           <div class="feedback-form__container">
             <button class="feedback-form__submit button" type="submit">Отправить отзыв</button>
-            <span class="feedback-form__note"><sup class="super-text">*</sup> — обязательные поля</span>
+            <span class="feedback-form__note">* — обязательные поля</span>
           </div>
         </form>
       </section>
@@ -229,29 +227,30 @@
     </footer>
   </div>
 
-  <div class="popup popup--error">
-    <div class="popup__inner">
-      <div class="popup__content">
-        <h2 class="popup__title">Что-то пошло не так!</h2>
-        <p class="popup__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      </div>
-
-      <div class="popup__button-wrapper">
-        <button class="popup__close button" type="button">OK</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="popup popup--success">
+  <!-- popup -->
+  <div class="popup popup--success"> <!-- popup--open -->
     <div class="popup__inner">
       <div class="popup__content">
         <h2 class="popup__title">Ваш отзыв отправлен!</h2>
-        <p class="popup__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем
+        <p class="popup__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем
           его на сайте.</p>
       </div>
 
       <div class="popup__button-wrapper">
         <button class="popup__close button" type="button">Закрыть окно</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup popup--error">
+    <div class="popup__inner">
+      <div class="popup__content">
+        <h2 class="popup__title">Что-то пошло не&nbsp;так!</h2>
+        <p class="popup__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      </div>
+
+      <div class="popup__button-wrapper">
+        <button class="popup__close button" type="button">OK</button>
       </div>
     </div>
   </div>
