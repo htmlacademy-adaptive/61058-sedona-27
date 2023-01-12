@@ -6,6 +6,8 @@ $line-height-default-mobile: 1.5;
 // colors
 $color-blue-basic: #81b3d2;
 $color-blue-secondary: #81b3d3;
+$color-blue-hover: #669ec0;
+$color-blue-active: #5496bd;
 $color-white: #ffffff;
 $color-white-tr-70: rgba(#ffffff, 0.7);
 $color-black: #000000;
@@ -18,26 +20,31 @@ $color-grey-rare-1: #d6d6d6;
 $color-grey-rare-2: #e5e5e5;
 $color-grey-rare-3: #dbdbdb;
 $color-grey-rare-4: #eaeaea;
+$color-grey-rare-5: #b3b3b3;
+$color-grey-rare-6: #d5d5d5;
+$color-grey-rare-7: #a4a4a4;
 $color-background-intro: rgba(#81b3d2, 0.5);
-$color-background-map: #ccddae;
 $color-brown-basic: #766357;
 
-// sizes
-$mobile-width: 320px;
+// viewport
+$mobile-min-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1200px;
+$mobile-only-width: $tablet-width - 0.1px;
 $catalog-tablet-min-width: 560px;
 $catalog-tablet-max-width: 648px;
 
+// sizes
 $site-navigation-toggle-size: 56px;
+$advantages-element-min-height: 256px;
+
+// paddings
 $base-container-horizontal-padding: calc(100vw * 20 / 320); // mobile
 $base-container-horizontal-padding-index: calc(100vw * 18 / 320);
 $tablet-base-horizontal-padding: calc(100vw * 60 / 768);
 $desktop-base-horizontal-padding: 120px;
 $advantage-element-horizontal-padding-tablet: 33px;
 $advantage-element-horizontal-padding-desktop: 50px;
-
-$advantages-element-min-height: 256px;
 
 // other
 $border-line: 1px solid $color-grey-rare-2;

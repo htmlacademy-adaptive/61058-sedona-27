@@ -1,10 +1,20 @@
 @use "../variables.scss" as var;
+@use "../mixins.scss";
 
 .likes {
   display: flex;
   align-items: flex-end;
-
   color: inherit;
+
+  @include mixins.smooth-transition;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 
   @media (min-width: var.$tablet-width) {
     margin-bottom: 8px;
@@ -17,6 +27,10 @@
 
   @media (min-width: var.$tablet-width) {
     margin-right: 9px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    opacity: 1;
   }
 }
 

@@ -5,21 +5,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона | Ваш отзыв</title>
+  <meta name="description" content="Оставьте свой отзыв. Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях.">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <!-- Проверяет поддержку WebP -->
+  <script>document.addEventListener("DOMContentLoaded",function(){testWebP(document.body)});function testWebP(e){let A=new Image;A.src="data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA",A.onload=A.onerror=function(){2===A.height?e.classList.add("webp"):e.classList.add("no-webp")}}</script>
+
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page__body">
   <div class="page__container">
-    <header class="page__header header">
+    <header class="header">
       <a class="header__logo" href="index.html">
         <img src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
       </a>
 
-      <nav class="header__navigation site-navigation site-navigation--no-js">
+      <nav class="site-navigation site-navigation--no-js">
         <button class="site-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -49,24 +56,24 @@
       <section class="main-form__feedback feedback-section">
         <div class="feedback-section__entrance">
           <h1 class="feedback-section__title">Оставьте свой отзыв</h1>
-          <p class="feedback-section__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
+          <p class="feedback-section__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о
             посещенных вами достопримечательностях</p>
         </div>
 
-        <form class="feedback-form" action="#" method="post">
+        <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset
             class="feedback-form__fieldset feedback-form__fieldset--text feedback-form__fieldset--name fieldset">
-            <legend class="feedback-form__legend fieldset__legend">Представьтесь:</legend>
+            <legend class="fieldset__legend">Представьтесь:</legend>
 
             <ul class="feedback-form__list fieldset__list">
               <li class="fieldset__item text-field">
-                <label class="text-field__label" for="feedback-name">Имя<sup class="super-text">*</sup>:</label>
+                <label class="text-field__label" for="feedback-name">Имя*:</label>
                 <input class="text-field__input field" type="text" name="feedback-name" id="feedback-name" value="Пётр"
                   placeholder="Имя" required>
               </li>
 
               <li class="fieldset__item text-field">
-                <label class="text-field__label" for="feedback-surname">Фамилия<sup class="super-text">*</sup>:</label>
+                <label class="text-field__label" for="feedback-surname">Фамилия*:</label>
                 <input class="text-field__input field" type="text" name="feedback-surname" id="feedback-surname"
                   value="Пустота" placeholder="Фамилия" required>
               </li>
@@ -81,12 +88,11 @@
 
           <fieldset
             class="feedback-form__fieldset feedback-form__fieldset--text feedback-form__fieldset--contacts fieldset">
-            <legend class="feedback-form__legend fieldset__legend">Контактная информация:</legend>
+            <legend class="fieldset__legend">Контактная информация:</legend>
 
             <ul class="feedback-form__list fieldset__list">
               <li class="fieldset__item text-field">
-                <label class="text-field__label" for="feedback-phone-number">Контактный телефон<sup
-                    class="super-text">*</sup>:</label>
+                <label class="text-field__label" for="feedback-phone-number">Контактный телефон*:</label>
                 <div class="text-field__input-container text-field__input-container--telephone">
                   <input class="text-field__input field" type="tel" name="feedback-phone-number"
                     id="feedback-phone-number" placeholder="Введите телефон" required>
@@ -94,8 +100,7 @@
               </li>
 
               <li class="fieldset__item text-field">
-                <label class="text-field__label" for="feedback-email">Электронная почта<sup
-                    class="super-text">*</sup>:</label>
+                <label class="text-field__label" for="feedback-email">Электронная почта*:</label>
                 <div class="text-field__input-container text-field__input-container--email">
                   <input class="text-field__input field" type="email" name="feedback-email" id="feedback-email"
                     placeholder="Введите e-mail" required>
@@ -105,7 +110,7 @@
           </fieldset>
 
           <fieldset class="feedback-form__fieldset fieldset">
-            <legend class="feedback-form__legend feedback-form__legend--decorated fieldset__legend">Ваше общее
+            <legend class="fieldset__legend fieldset__legend--decorated">Ваше общее
               впечатление:</legend>
 
             <ul class="fieldset__list fieldset__list--radio">
@@ -133,7 +138,7 @@
           </fieldset>
 
           <fieldset class="feedback-form__fieldset feedback-form__fieldset--penult fieldset">
-            <legend class="feedback-form__legend feedback-form__legend--decorated fieldset__legend">Посещенные
+            <legend class="fieldset__legend fieldset__legend--decorated">Посещенные
               достопримечательности:</legend>
 
             <ul class="fieldset__list fieldset__list--checkbox">
@@ -168,7 +173,7 @@
           </fieldset>
 
           <fieldset class="feedback-form__fieldset feedback-form__fieldset--last fieldset">
-            <legend class="feedback-form__legend feedback-form__legend--decorated fieldset__legend"><label
+            <legend class="fieldset__legend fieldset__legend--decorated"><label
                 for="feedback-comment">Опишите свои эмоции:</label></legend>
 
             <textarea class="feedback-form__textarea fieldset__textarea field" name="feedback-comment"
@@ -177,13 +182,13 @@
 
           <div class="feedback-form__container">
             <button class="feedback-form__submit button" type="submit">Отправить отзыв</button>
-            <span class="feedback-form__note"><sup class="super-text">*</sup> — обязательные поля</span>
+            <span class="feedback-form__note">* — обязательные поля</span>
           </div>
         </form>
       </section>
     </main>
 
-    <footer class="page__footer footer">
+    <footer class="footer">
       <p class="footer__hashtag">#visitsedona</p>
 
       <ul class="footer__social social" aria-label="Социальные сети.">
@@ -215,31 +220,19 @@
 
       <a class="footer__maid-in" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         Разработано
-        <svg class="footer__logo" width="27" height="35" role="img" aria-label="HTML Academy">
+        <svg width="27" height="35" role="img" aria-label="HTML Academy">
           <use href="img/vector/sprite.svg#htmlacademy-logo"/>
         </svg>
       </a>
     </footer>
   </div>
 
-  <div class="popup popup--error">
-    <div class="popup__inner">
-      <div class="popup__content">
-        <h2 class="popup__title">Что-то пошло не так!</h2>
-        <p class="popup__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      </div>
-
-      <div class="popup__button-wrapper">
-        <button class="popup__close button" type="button">OK</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="popup popup--success">
+  <!-- popup -->
+  <div class="popup popup--success"> <!-- popup--open -->
     <div class="popup__inner">
       <div class="popup__content">
         <h2 class="popup__title">Ваш отзыв отправлен!</h2>
-        <p class="popup__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем
+        <p class="popup__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем
           его на сайте.</p>
       </div>
 
@@ -249,7 +242,20 @@
     </div>
   </div>
 
-  <script src="js/main.min.js" type="text/javascript"></script>
+  <div class="popup popup--error">
+    <div class="popup__inner">
+      <div class="popup__content">
+        <h2 class="popup__title">Что-то пошло не&nbsp;так!</h2>
+        <p class="popup__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      </div>
+
+      <div class="popup__button-wrapper">
+        <button class="popup__close button" type="button">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.min.js" type="module"></script>
 </body>
 
 </html>

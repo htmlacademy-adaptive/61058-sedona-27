@@ -1,12 +1,12 @@
 @use "../mixins.scss";
 @use "../variables.scss" as var;
 
+$-legend-line-width: calc((100% - 400px) / 2);
+
 .fieldset {
   position: relative;
-
   margin: 0;
   padding: 0 var.$base-container-horizontal-padding 24px;
-
   border: none;
 
   @media (min-width: var.$tablet-width) {
@@ -20,16 +20,39 @@
   padding-top: 24px;
   padding-bottom: 20px;
 
-  font-size: 18px;
-  line-height: 1.44;
+  @include mixins.font-18;
   font-weight: 700;
   text-align: center;
 
   @media (min-width: var.$tablet-width) {
     padding: 0;
     margin-bottom: 28px;
-    font-size: 21px;
-    line-height: 1.24;
+
+    @include mixins.font-21;
+
+    &--decorated {
+      position: relative;
+      width: 100%;
+      padding: 0 calc($-legend-line-width + 47px);
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        height: 1px;
+        width: $-legend-line-width;
+        background-color: var.$color-grey-rare-3;
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+    }
   }
 }
 
@@ -85,7 +108,12 @@
 }
 
 .fieldset__textarea {
+  display: block;
   width: 100%;
-  min-height: 160px;
+  min-height: 150px;
   resize: none;
+
+  @media (min-width: var.$tablet-width) {
+    min-height: 160px;
+  }
 }

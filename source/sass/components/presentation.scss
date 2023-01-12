@@ -4,7 +4,7 @@
 $-text-content-max-width: 445px;
 
 .presentation {
-  @include mixins.base-centralizer;
+  @include mixins.base-horizontal-paddings;
 
   @media (min-width: var.$tablet-width) {
     padding: 0 var.$tablet-base-horizontal-padding;

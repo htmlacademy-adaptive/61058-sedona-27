@@ -16,23 +16,9 @@
 
 .advantages__item {
   position: relative;
-  order: 3;
-
-  &--order-first {
-    order: 1;
-  }
-
-  &--order-second {
-    order: 2;
-  }
-
-  &--last {
-    padding-bottom: 28px;
-  }
 
   &::after {
     content: "";
-
     position: absolute;
     left: var.$base-container-horizontal-padding;
     right: var.$base-container-horizontal-padding;
@@ -43,16 +29,22 @@
   }
 
   &--illustrated,
-  &--services,
-  &--last {
+  &:last-child {
     &::after {
       display: none;
+    }
+  }
+
+  @media (max-width: var.$mobile-only-width) {
+    &:last-child {
+      padding-bottom: 28px;
     }
   }
 
   @media (min-width: var.$tablet-width) {
     &--illustrated {
       display: flex;
+      flex-wrap: wrap;
       width: 100%;
     }
 
@@ -60,52 +52,23 @@
       flex-direction: row-reverse;
     }
 
-    &--services {
-      width: 100%;
-    }
-
     &::after {
       display: none;
     }
   }
-
-  @media (min-width: var.$desktop-width) {
-    &:nth-child(3) {
-      padding-top: 65px;
-    }
-
-    &--last {
-      padding-bottom: 20px;
-    }
-  }
 }
 
-.advantages__element-container {
-  flex-shrink: 0;
-
-  .advantages__item--order-first & {
+.advantages__item:first-child .advantages__element-container {
+  @media (max-width: var.$mobile-only-width) {
     padding-top: 34px;
     padding-bottom: 40px;
-  }
-
-  @media (min-width: var.$tablet-width) {
-    &,
-    .advantages__item--order-first & {
-      padding-top: 52px;
-      padding-bottom: 31px;
-    }
-  }
-
-  @media (min-width: var.$desktop-width) {
-    &,
-    .advantages__item--order-first & {
-      padding-bottom: 52px;
-    }
   }
 }
 
 .advantages__image-container {
-  flex-grow: 1;
+  @media (min-width: var.$tablet-width) {
+    width: calc(100% * 2 / 3);
+  }
 }
 
 .advantages__image {
@@ -117,28 +80,5 @@
     width: 100%;
     min-height: var.$advantages-element-min-height;
     height: 100%;
-  }
-}
-
-.advantages__title {
-  position: relative;
-
-  &::after {
-    counter-increment: advantage;
-    content: "— №" counter(advantage) " —";
-
-    position: absolute;
-    top: calc(100% + 11px);
-    left: 50%;
-    transform: translateX(-50%);
-
-    font-size: 14px;
-    line-height: 1.5;
-    font-weight: 400;
-    color: var.$color-grey-dark;
-  }
-
-  .advantages__item--illustrated &::after {
-    color: var.$color-white;
   }
 }

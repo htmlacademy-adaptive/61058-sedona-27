@@ -10,22 +10,63 @@ $-padding-bottom: min(90px, $-padding-bottom-calc);
 $-padding-top-secondary: min(101px, $-padding-top-calc-secondary);
 $-padding-bottom-secondary: min(120px, $-padding-bottom-calc-secondary);
 
+.webp .intro {
+  --bg-image: url("../img/desktop/intro-back.webp");
+
+  @media (min-resolution: 2dppx) {
+    --bg-image: url("../img/desktop/intro-back@2x.webp");
+  }
+
+  @media (max-width: var.$tablet-width) {
+    --bg-image: url("../img/tablet/intro-back.webp");
+  }
+
+  @media (max-width: var.$tablet-width) and (min-resolution: 2dppx) {
+    --bg-image: url("../img/tablet/intro-back@2x.webp");
+  }
+
+  @media (max-width: var.$mobile-min-width) {
+    --bg-image: url("../img/mobile/intro-back.webp");
+  }
+
+  @media (max-width: var.$mobile-min-width) and (min-resolution: 2dppx) {
+    --bg-image: url("../img/mobile/intro-back@2x.webp");
+  }
+}
+
+.no-webp .intro {
+  --bg-image: url("../img/desktop/intro-back.jpg");
+
+  @media (min-resolution: 2dppx) {
+    --bg-image: url("../img/desktop/intro-back@2x.jpg");
+  }
+
+  @media (max-width: var.$tablet-width) {
+    --bg-image: url("../img/tablet/intro-back.jpg");
+  }
+
+  @media (max-width: var.$tablet-width) and (min-resolution: 2dppx) {
+    --bg-image: url("../img/tablet/intro-back@2x.jpg");
+  }
+
+  @media (max-width: var.$mobile-min-width) {
+    --bg-image: url("../img/mobile/intro-back.jpg");
+  }
+
+  @media (max-width: var.$mobile-min-width) and (min-resolution: 2dppx) {
+    --bg-image: url("../img/mobile/intro-back@2x.jpg");
+  }
+}
+
 .intro {
-  @include mixins.base-centralizer;
+  @include mixins.base-horizontal-paddings;
 
   position: relative;
   padding-top: $-padding-top;
   padding-bottom: $-padding-bottom;
 
   background-color: var.$color-background-intro;
-  background-image: url("../img/desktop/intro-back.jpg");
-  /* stylelint-disable-next-line declaration-block-no-duplicate-properties --
-   * Выше fallback `background-image` в случае неподдержки `image-set`
-   */
-  background-image: image-set(
-    "../img/desktop/intro-back.webp" 1x,
-    "../img/desktop/intro-back.jpg" 1x,
-  );
+  background-image: var(--bg-image);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
@@ -48,65 +89,11 @@ $-padding-bottom-secondary: min(120px, $-padding-bottom-calc-secondary);
     background-position: bottom;
     background-size: 100%;
   }
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/desktop/intro-back@2x.jpg");
-    /* stylelint-disable-next-line declaration-block-no-duplicate-properties --
-     * Выше fallback `background-image` в случае неподдержки `image-set`
-     */
-    background-image: image-set(
-      "../img/desktop/intro-back@2x.webp" 2x,
-      "../img/desktop/intro-back@2x.jpg" 2x,
-    );
-  }
-
-  @media (max-width: var.$tablet-width) {
-    background-image: url("../img/tablet/intro-back.jpg");
-    /* stylelint-disable-next-line declaration-block-no-duplicate-properties --
-     * Выше fallback `background-image` в случае неподдержки `image-set`
-     */
-    background-image: image-set(
-      "../img/tablet/intro-back.webp" 1x,
-      "../img/tablet/intro-back.jpg" 1x,
-    );
-  }
-
-  @media (max-width: var.$tablet-width) and (min-resolution: 2dppx) {
-    background-image: url("../img/tablet/intro-back@2x.jpg");
-    /* stylelint-disable-next-line declaration-block-no-duplicate-properties --
-     * Выше fallback `background-image` в случае неподдержки `image-set`
-     */
-    background-image: image-set(
-      "../img/tablet/intro-back@2x.webp" 2x,
-      "../img/tablet/intro-back@2x.jpg" 2x,
-    );
-  }
-
-  @media (max-width: var.$mobile-width) {
-    background-image: url("../img/mobile/intro-back.jpg");
-    /* stylelint-disable-next-line declaration-block-no-duplicate-properties --
-     * Выше fallback `background-image` в случае неподдержки `image-set`
-     */
-    background-image: image-set(
-      "../img/mobile/intro-back.webp" 1x,
-      "../img/mobile/intro-back.jpg" 1x,
-    );
-  }
-
-  @media (max-width: var.$mobile-width) and (min-resolution: 2dppx) {
-    background-image: url("../img/mobile/intro-back@2x.jpg");
-    /* stylelint-disable-next-line declaration-block-no-duplicate-properties --
-     * Выше fallback `background-image` в случае неподдержки `image-set`
-     */
-    background-image: image-set(
-      "../img/mobile/intro-back.webp" 2x,
-      "../img/mobile/intro-back@2x.jpg" 2x,
-    );
-  }
 }
 
 .intro__image {
   width: 60vw;
+  margin: 0 auto;
   min-width: 282px;
   max-width: 461px;
 }

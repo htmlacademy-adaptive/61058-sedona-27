@@ -3,7 +3,6 @@
 
 $-fieldset-margin-bottom-tablet: 48px;
 $-fieldset-margin-bottom-desktop: 56px;
-$-legend-line-width: calc((100% - 400px) / 2);
 $-desktop-form-down-elements-max-width: 768px;
 $-contacts-fieldset-max-width: 466px;
 
@@ -114,50 +113,21 @@ $-contacts-fieldset-max-width: 466px;
   }
 }
 
-.feedback-form__legend {
-  @media (min-width: var.$tablet-width) {
-    &--decorated {
-      position: relative;
-      width: 100%;
-      padding: 0 calc($-legend-line-width + 47px);
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        height: 1px;
-        width: $-legend-line-width;
-        background-color: var.$color-grey-rare-3;
-      }
-
-      &::before {
-        left: 0;
-      }
-
-      &::after {
-        right: 0;
-      }
-    }
-  }
-}
-
 .feedback-form__textarea {
-  display: block;
   max-width: $-desktop-form-down-elements-max-width;
   margin: 0 auto;
 }
 
 .feedback-form__container {
-  @include mixins.base-centralizer;
+  @include mixins.base-horizontal-paddings;
   width: 100%;
   max-width: $-desktop-form-down-elements-max-width;
   margin: 0 auto;
 
   @media (min-width: var.$tablet-width) {
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
     padding: 0;
     order: 3;
   }
@@ -167,8 +137,7 @@ $-contacts-fieldset-max-width: 466px;
   width: 100%;
   margin-bottom: 3px;
 
-  font-size: 21px;
-  line-height: 1.24;
+  @include mixins.font-21;
 
   @media (min-width: var.$tablet-width) {
     width: 50%;
@@ -177,6 +146,8 @@ $-contacts-fieldset-max-width: 466px;
 }
 
 .feedback-form__note {
+  display: block;
+  width: fit-content;
   margin-left: auto;
 
   font-size: 12px;
@@ -184,8 +155,7 @@ $-contacts-fieldset-max-width: 466px;
   color: var.$color-grey-dark-tr-60;
 
   @media (min-width: var.$tablet-width) {
-    font-size: 14px;
-    line-height: 1.5;
+    @include mixins.font-14;
     margin-top: 8px;
   }
 }

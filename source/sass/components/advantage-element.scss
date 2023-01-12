@@ -4,18 +4,17 @@
 $-text-max-width-mobile: 400px;
 
 .advantage-element {
-  @include mixins.base-centralizer;
+  @include mixins.base-horizontal-paddings;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-
   padding-top: 24px;
   padding-bottom: 26px;
-
   background-color: var.$color-grey-light;
 
   &--special {
     padding-top: 37px;
     padding-bottom: 37px;
-
     background-color: var.$color-blue-basic;
     color: var.$color-white;
   }
@@ -23,28 +22,57 @@ $-text-max-width-mobile: 400px;
   @media (min-width: var.$tablet-width) {
     min-height: var.$advantages-element-min-height;
     width: calc(100% / 3);
-    padding: 28px var.$advantage-element-horizontal-padding-tablet;
+    padding: 42px var.$advantage-element-horizontal-padding-tablet;
+
+    &--special {
+      padding-top: 52px;
+      padding-bottom: 31px;
+    }
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 45px var.$advantage-element-horizontal-padding-desktop 40px;
+    padding-left: var.$advantage-element-horizontal-padding-desktop;
+    padding-right: var.$advantage-element-horizontal-padding-desktop;
+
+    &--special {
+      padding-bottom: 52px;
+    }
   }
 }
 
 .advantage-element__title {
+  position: relative;
   max-width: $-text-max-width-mobile;
   margin: 0 auto;
   margin-bottom: 49px;
 
-  font-size: 18px;
-  line-height: 1.44;
+  @include mixins.font-18;
   text-align: center;
+
+  &::after {
+    counter-increment: advantage;
+    content: "— №" counter(advantage) " —";
+    position: absolute;
+    top: calc(100% + 11px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mixins.font-14;
+    font-weight: 400;
+    color: var.$color-grey-dark;
+  }
 
   @media (min-width: var.$tablet-width) {
     max-width: 150px;
     margin-bottom: 56px;
-    font-size: 21px;
-    line-height: 1.24;
+
+    @include mixins.font-21;
+  }
+}
+
+.advantage-element--special .advantage-element__title {
+  &::after {
+    color: inherit;
   }
 }
 
@@ -52,12 +80,11 @@ $-text-max-width-mobile: 400px;
   max-width: $-text-max-width-mobile;
   margin: 0 auto;
 
-  font-size: 14px;
-  line-height: 1.5;
+  @include mixins.font-14;
   text-align: center;
   color: var.$color-grey-dark;
+}
 
-  .advantage-element--special & {
-    color: var.$color-white;
-  }
+.advantage-element--special .advantage-element__text {
+  color: var.$color-white;
 }
