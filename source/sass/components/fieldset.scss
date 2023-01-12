@@ -1,6 +1,8 @@
 @use "../mixins.scss";
 @use "../variables.scss" as var;
 
+$-legend-line-width: calc((100% - 400px) / 2);
+
 .fieldset {
   position: relative;
   margin: 0;
@@ -27,6 +29,30 @@
     margin-bottom: 28px;
 
     @include mixins.font-21;
+
+    &--decorated {
+      position: relative;
+      width: 100%;
+      padding: 0 calc($-legend-line-width + 47px);
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        height: 1px;
+        width: $-legend-line-width;
+        background-color: var.$color-grey-rare-3;
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+    }
   }
 }
 
@@ -82,6 +108,7 @@
 }
 
 .fieldset__textarea {
+  display: block;
   width: 100%;
   min-height: 150px;
   resize: none;

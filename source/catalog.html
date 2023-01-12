@@ -15,7 +15,7 @@
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <!-- Проверяет поддержку WebP -->
-  <script>document.addEventListener("DOMContentLoaded",function(){testWebP(document.body)});function testWebP(e){let A=new Image;A.src="data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA",A.onload=A.onerror=function(){2===A.height?e.classList.add("webp"):e.classList.add("no-webp")}}</script>
+  <script>document.addEventListener("DOMContentLoaded", function () { testWebP(document.body) }); function testWebP(e) { let A = new Image; A.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA", A.onload = A.onerror = function () { 2 === A.height ? e.classList.add("webp") : e.classList.add("no-webp") } }</script>
 
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -67,28 +67,30 @@
         <ul class="catalog">
           <li class="catalog__item catalog__item--main">
             <article class="catalog__card photo-card">
-              <picture class="photo-card__image-container">
-                <source type="image/webp" media="(min-width: 769px)"
-                  srcset="img/desktop/catalog-photo-1.webp 1x, img/desktop/catalog-photo-1@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 560px)"
-                  srcset="img/tablet/catalog-photo-1.webp 1x, img/tablet/catalog-photo-1@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/mobile/catalog-photo-1.webp 1x, img/mobile/catalog-photo-1@2x.webp 2x">
-                <source media="(min-width: 769px)"
-                  srcset="img/desktop/catalog-photo-1.jpg 1x, img/desktop/catalog-photo-1@2x.jpg 2x">
-                <source media="(min-width: 560px)"
-                  srcset="img/tablet/catalog-photo-1.jpg 1x, img/tablet/catalog-photo-1@2x.jpg 2x">
-                <img class="photo-card__image photo-card__image--main" src="img/mobile/catalog-photo-1.jpg" width="280"
-                  height="280" srcset="img/mobile/catalog-photo-1@2x.jpg 2x"
-                  alt="Автомобильная дорога в просторной местности во время заката.">
-              </picture>
+              <a class="photo-card__image-link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 769px)"
+                    srcset="img/desktop/catalog-photo-1.webp 1x, img/desktop/catalog-photo-1@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 560px)"
+                    srcset="img/tablet/catalog-photo-1.webp 1x, img/tablet/catalog-photo-1@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/mobile/catalog-photo-1.webp 1x, img/mobile/catalog-photo-1@2x.webp 2x">
+                  <source media="(min-width: 769px)"
+                    srcset="img/desktop/catalog-photo-1.jpg 1x, img/desktop/catalog-photo-1@2x.jpg 2x">
+                  <source media="(min-width: 560px)"
+                    srcset="img/tablet/catalog-photo-1.jpg 1x, img/tablet/catalog-photo-1@2x.jpg 2x">
+                  <img class="photo-card__image photo-card__image--main" src="img/mobile/catalog-photo-1.jpg"
+                    width="280" height="280" srcset="img/mobile/catalog-photo-1@2x.jpg 2x"
+                    alt="Автомобильная дорога в просторной местности во время заката.">
+                </picture>
+              </a>
               <div class="photo-card__content">
-                <h2 class="photo-card__title">Неродные просторы</h2>
+                <h2 class="photo-card__title"><a class="photo-card__title-link" href="#">Неродные просторы</a></h2>
                 <span class="photo-card__info">Автор фото: Борис</span>
 
                 <a class="photo-card__likes likes" href="#">
                   <span class="visually-hidden">Поставить лайк</span>
-                  <svg class="photo-card__likes-icon likes__icon" width="23" height="21" viewBox="0 0 23 21">
+                  <svg class="likes__icon" width="23" height="21" viewBox="0 0 23 21">
                     <use href="img/vector/sprite.svg#like" />
                   </svg>
                   <span class="likes__count"><span class="visually-hidden">Количество лайков:</span>1350</span>
@@ -98,28 +100,30 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__card photo-card">
-              <picture class="photo-card__image-container">
-                <source type="image/webp" media="(min-width: 769px)"
-                  srcset="img/desktop/catalog-photo-2.webp 1x, img/desktop/catalog-photo-2@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 560px)"
-                  srcset="img/tablet/catalog-photo-2.webp 1x, img/tablet/catalog-photo-2@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/mobile/catalog-photo-2.webp 1x, img/mobile/catalog-photo-2@2x.webp 2x">
-                <source media="(min-width: 769px)"
-                  srcset="img/desktop/catalog-photo-2.jpg 1x, img/desktop/catalog-photo-2@2x.jpg 2x">
-                <source media="(min-width: 560px)"
-                  srcset="img/tablet/catalog-photo-2.jpg 1x, img/tablet/catalog-photo-2@2x.jpg 2x">
-                <img class="photo-card__image" src="img/mobile/catalog-photo-2.jpg" width="280" height="280"
-                  srcset="img/mobile/catalog-photo-2@2x.jpg 2x" alt="Цветущий кактус на фоне красных скал."
-                  loading="lazy">
-              </picture>
+              <a class="photo-card__image-link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 769px)"
+                    srcset="img/desktop/catalog-photo-2.webp 1x, img/desktop/catalog-photo-2@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 560px)"
+                    srcset="img/tablet/catalog-photo-2.webp 1x, img/tablet/catalog-photo-2@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/mobile/catalog-photo-2.webp 1x, img/mobile/catalog-photo-2@2x.webp 2x">
+                  <source media="(min-width: 769px)"
+                    srcset="img/desktop/catalog-photo-2.jpg 1x, img/desktop/catalog-photo-2@2x.jpg 2x">
+                  <source media="(min-width: 560px)"
+                    srcset="img/tablet/catalog-photo-2.jpg 1x, img/tablet/catalog-photo-2@2x.jpg 2x">
+                  <img class="photo-card__image" src="img/mobile/catalog-photo-2.jpg" width="280" height="280"
+                    srcset="img/mobile/catalog-photo-2@2x.jpg 2x" alt="Цветущий кактус на фоне красных скал."
+                    loading="lazy">
+                </picture>
+              </a>
               <div class="photo-card__content">
-                <h2 class="photo-card__title">Местная растительность</h2>
+                <h2 class="photo-card__title"><a class="photo-card__title-link" href="#">Местная растительность</a></h2>
                 <span class="photo-card__info">Автор фото: Сергей</span>
 
                 <a class="photo-card__likes likes" href="#">
                   <span class="visually-hidden">Поставить лайк</span>
-                  <svg class="photo-card__likes-icon likes__icon" width="23" height="21" viewBox="0 0 23 21">
+                  <svg class="likes__icon" width="23" height="21" viewBox="0 0 23 21">
                     <use href="img/vector/sprite.svg#like" />
                   </svg>
                   <span class="likes__count"><span class="visually-hidden">Количество лайков:</span>143</span>
@@ -129,28 +133,30 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__card photo-card photo-card--highlighted">
-              <picture class="photo-card__image-container">
-                <source type="image/webp" media="(min-width: 769px)"
-                  srcset="img/desktop/catalog-photo-3.webp 1x, img/desktop/catalog-photo-3@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 560px)"
-                  srcset="img/tablet/catalog-photo-3.webp 1x, img/tablet/catalog-photo-3@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/mobile/catalog-photo-3.webp 1x, img/mobile/catalog-photo-3@2x.webp 2x">
-                <source media="(min-width: 769px)"
-                  srcset="img/desktop/catalog-photo-3.jpg 1x, img/desktop/catalog-photo-3@2x.jpg 2x">
-                <source media="(min-width: 560px)"
-                  srcset="img/tablet/catalog-photo-3.jpg 1x, img/tablet/catalog-photo-3@2x.jpg 2x">
-                <img class="photo-card__image" src="img/mobile/catalog-photo-3.jpg" width="280" height="280"
-                  srcset="img/mobile/catalog-photo-3@2x.jpg 2x"
-                  alt="Автомобильная дорога среди лесов с высоты причьего полета." loading="lazy">
-              </picture>
+              <a class="photo-card__image-link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 769px)"
+                    srcset="img/desktop/catalog-photo-3.webp 1x, img/desktop/catalog-photo-3@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 560px)"
+                    srcset="img/tablet/catalog-photo-3.webp 1x, img/tablet/catalog-photo-3@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/mobile/catalog-photo-3.webp 1x, img/mobile/catalog-photo-3@2x.webp 2x">
+                  <source media="(min-width: 769px)"
+                    srcset="img/desktop/catalog-photo-3.jpg 1x, img/desktop/catalog-photo-3@2x.jpg 2x">
+                  <source media="(min-width: 560px)"
+                    srcset="img/tablet/catalog-photo-3.jpg 1x, img/tablet/catalog-photo-3@2x.jpg 2x">
+                  <img class="photo-card__image" src="img/mobile/catalog-photo-3.jpg" width="280" height="280"
+                    srcset="img/mobile/catalog-photo-3@2x.jpg 2x"
+                    alt="Автомобильная дорога среди лесов с высоты причьего полета." loading="lazy">
+                </picture>
+              </a>
               <div class="photo-card__content">
-                <h2 class="photo-card__title">Дорога на север</h2>
+                <h2 class="photo-card__title"><a class="photo-card__title-link" href="#">Дорога на север</a></h2>
                 <span class="photo-card__info">Автор фото: Петр</span>
 
                 <a class="photo-card__likes likes" href="#">
                   <span class="visually-hidden">Поставить лайк</span>
-                  <svg class="photo-card__likes-icon likes__icon" width="23" height="21" viewBox="0 0 23 21">
+                  <svg class="likes__icon" width="23" height="21" viewBox="0 0 23 21">
                     <use href="img/vector/sprite.svg#like" />
                   </svg>
                   <span class="likes__count"><span class="visually-hidden">Количество лайков:</span>96</span>
@@ -160,28 +166,30 @@
           </li>
           <li class="catalog__item">
             <article class="catalog__card photo-card">
-              <picture class="photo-card__image-container">
-                <source type="image/webp" media="(min-width: 769px)"
-                  srcset="img/desktop/catalog-photo-4.webp 1x, img/desktop/catalog-photo-4@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 560px)"
-                  srcset="img/tablet/catalog-photo-4.webp 1x, img/tablet/catalog-photo-4@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/mobile/catalog-photo-4.webp 1x, img/mobile/catalog-photo-4@2x.webp 2x">
-                <source media="(min-width: 769px)"
-                  srcset="img/desktop/catalog-photo-4.jpg 1x, img/desktop/catalog-photo-4@2x.jpg 2x">
-                <source media="(min-width: 560px)"
-                  srcset="img/tablet/catalog-photo-4.jpg 1x, img/tablet/catalog-photo-4@2x.jpg 2x">
-                <img class="photo-card__image" src="img/mobile/catalog-photo-4.jpg" width="280" height="280"
-                  srcset="img/mobile/catalog-photo-4@2x.jpg 2x" alt="Достопримечательность Мост Дьявола."
-                  loading="lazy">
-              </picture>
+              <a class="photo-card__image-link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 769px)"
+                    srcset="img/desktop/catalog-photo-4.webp 1x, img/desktop/catalog-photo-4@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 560px)"
+                    srcset="img/tablet/catalog-photo-4.webp 1x, img/tablet/catalog-photo-4@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/mobile/catalog-photo-4.webp 1x, img/mobile/catalog-photo-4@2x.webp 2x">
+                  <source media="(min-width: 769px)"
+                    srcset="img/desktop/catalog-photo-4.jpg 1x, img/desktop/catalog-photo-4@2x.jpg 2x">
+                  <source media="(min-width: 560px)"
+                    srcset="img/tablet/catalog-photo-4.jpg 1x, img/tablet/catalog-photo-4@2x.jpg 2x">
+                  <img class="photo-card__image" src="img/mobile/catalog-photo-4.jpg" width="280" height="280"
+                    srcset="img/mobile/catalog-photo-4@2x.jpg 2x" alt="Достопримечательность Мост Дьявола."
+                    loading="lazy">
+                </picture>
+              </a>
               <div class="photo-card__content">
-                <h2 class="photo-card__title">Мост Дьявола</h2>
+                <h2 class="photo-card__title"><a class="photo-card__title-link" href="#">Мост Дьявола</a></h2>
                 <span class="photo-card__info">Автор фото: Антон</span>
 
                 <a class="photo-card__likes likes" href="#">
                   <span class="visually-hidden">Поставить лайк</span>
-                  <svg class="photo-card__likes-icon likes__icon" width="23" height="21" viewBox="0 0 23 21">
+                  <svg class="likes__icon" width="23" height="21" viewBox="0 0 23 21">
                     <use href="img/vector/sprite.svg#like" />
                   </svg>
                   <span class="likes__count"><span class="visually-hidden">Количество лайков:</span>254</span>
@@ -198,12 +206,10 @@
           раз!</p>
 
         <div class="presentation__video video">
-          <img class="video__image" src="img/catalog-video.jpg" width="280" height="177" srcset="
-          img/catalog-video@2x.webp 2x,
-          img/catalog-video@2x.jpg 2x,
-          img/catalog-video.webp 1x,
-          img/catalog-video.jpg 1x,
-          " alt="Превью видео." loading="lazy">
+          <picture>
+            <source type="image/webp" srcset="img/desktop/catalog-video@2x.webp 2x, img/desktop/catalog-video.webp 1x">
+            <img class="video__image" src="img/desktop/catalog-video.jpg" width="280" height="177" srcset="img/desktop/catalog-video@2x.jpg 2x, img/desktop/catalog-video.jpg 1x" alt="Превью видео." loading="lazy">
+          </picture>
           <a class="video__play" href="#">
             <span class="visually-hidden">Воспроизвести видео</span>
           </a>
@@ -250,7 +256,7 @@
     </footer>
   </div>
 
-  <script src="js/main.min.js" type="text/javascript"></script>
+  <script src="js/main.min.js" type="module"></script>
 </body>
 
 </html>

@@ -40,6 +40,7 @@ $-tablet-desktop-main-photo-height: 400px;
     grid-template-columns: 1fr min-content;
     gap: 1px 20px;
     align-items: center;
+    z-index: 1;
 
     padding: 22px 20px 15px;
     background-color: var.$color-grey-basic;
@@ -62,8 +63,30 @@ $-tablet-desktop-main-photo-height: 400px;
   }
 }
 
-.photo-card__image-container {
+.photo-card__image-link {
+  position: relative;
   margin-bottom: 15px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var.$color-black;
+    opacity: 0;
+
+    @include mixins.smooth-transition;
+  }
+
+  &:hover::after {
+    opacity: 0.3;
+  }
+
+  &:active::after {
+    opacity: 0.5;
+  }
 
   @media (min-width: var.$catalog-tablet-min-width) {
     margin-bottom: 0;
@@ -94,8 +117,38 @@ $-tablet-desktop-main-photo-height: 400px;
   max-width: $-text-content-max-width;
   margin: 0;
 
-  font-size: 14px;
-  line-height: 1.5;
+  @include mixins.font-14;
+
+  @media (min-width: var.$catalog-tablet-min-width) {
+    align-self: end;
+  }
+}
+
+.photo-card__title-link {
+  position: relative;
+  display: block;
+  width: fit-content;
+  color: inherit;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid;
+    opacity: 0;
+
+    @include mixins.smooth-transition;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
 
 .photo-card__info {
@@ -106,6 +159,7 @@ $-tablet-desktop-main-photo-height: 400px;
   color: var.$color-grey-dark;
 
   @media (min-width: var.$catalog-tablet-min-width) {
+    align-self: start;
     margin-bottom: 0;
   }
 
@@ -119,11 +173,5 @@ $-tablet-desktop-main-photo-height: 400px;
     grid-row: 1 / span 2;
     grid-column: 2;
     justify-self: end;
-  }
-}
-
-.photo-card__likes-icon {
-  @media (min-width: var.$desktop-width) {
-    opacity: 1;
   }
 }
