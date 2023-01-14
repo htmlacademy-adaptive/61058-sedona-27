@@ -5,7 +5,6 @@ $-link-size: 48px;
 
 .social {
   @include mixins.list-style-reset;
-
   display: grid;
   grid-template-columns: repeat(3, $-link-size);
   grid-auto-rows: 48px;
@@ -17,10 +16,9 @@ $-link-size: 48px;
 }
 
 .social__link {
+  @include mixins.blue-intaractive-element;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 8px;
-
-  @include mixins.blue-intaractive-element;
 }

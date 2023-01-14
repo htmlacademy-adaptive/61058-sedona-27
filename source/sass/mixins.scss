@@ -59,7 +59,6 @@
 
 @mixin intaractive-element {
   @include smooth-transition;
-
   color: inherit;
 
   &:hover {

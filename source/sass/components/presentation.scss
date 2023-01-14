@@ -16,12 +16,10 @@ $-text-content-max-width: 445px;
 }
 
 .presentation__title {
+  @include mixins.font-18;
   max-width: $-text-content-max-width;
   margin: 0 auto;
   margin-bottom: 27px;
-
-  font-size: 18px;
-  line-height: 1.44;
   text-align: center;
 
   @media (min-width: var.$tablet-width) {
@@ -36,7 +34,6 @@ $-text-content-max-width: 445px;
   max-width: $-text-content-max-width;
   margin: 0 auto;
   padding: 0 10px;
-
   text-align: center;
   color: var.$color-grey-dark;
 

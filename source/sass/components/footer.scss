@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding-top: 28px;
   padding-bottom: 23px;
 
@@ -23,10 +22,9 @@
 }
 
 .footer__hashtag {
+  @include mixins.font-21;
   margin: 0;
   margin-bottom: 34px;
-
-  @include mixins.font-21;
   font-weight: 700;
 
   @media (min-width: var.$tablet-width) {
@@ -43,11 +41,10 @@
 }
 
 .footer__maid-in {
+  @include mixins.intaractive-element;
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: center;
   gap: 12px;
   margin: 0;
-
-  @include mixins.intaractive-element;
 }

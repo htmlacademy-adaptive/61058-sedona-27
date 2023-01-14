@@ -7,15 +7,12 @@ $-tablet-desktop-main-photo-height: 400px;
 
 .photo-card {
   @include mixins.base-horizontal-paddings;
-
+  @include mixins.font-14;
   width: 280px;
   margin: 0 auto;
   padding-top: 24px;
   padding-bottom: 30px;
   box-sizing: content-box;
-
-  font-size: 14px;
-  line-height: 1.5;
 
   @media (min-width: var.$catalog-tablet-min-width) {
     display: flex;
@@ -41,7 +38,6 @@ $-tablet-desktop-main-photo-height: 400px;
     gap: 1px 20px;
     align-items: center;
     z-index: 1;
-
     padding: 22px 20px 15px;
     background-color: var.$color-grey-basic;
 
@@ -68,6 +64,7 @@ $-tablet-desktop-main-photo-height: 400px;
   margin-bottom: 15px;
 
   &::after {
+    @include mixins.smooth-transition;
     content: "";
     position: absolute;
     top: 0;
@@ -76,8 +73,6 @@ $-tablet-desktop-main-photo-height: 400px;
     left: 0;
     background-color: var.$color-black;
     opacity: 0;
-
-    @include mixins.smooth-transition;
   }
 
   &:hover::after {
@@ -114,10 +109,9 @@ $-tablet-desktop-main-photo-height: 400px;
 }
 
 .photo-card__title {
+  @include mixins.font-14;
   max-width: $-text-content-max-width;
   margin: 0;
-
-  @include mixins.font-14;
 
   @media (min-width: var.$catalog-tablet-min-width) {
     align-self: end;
@@ -131,6 +125,7 @@ $-tablet-desktop-main-photo-height: 400px;
   color: inherit;
 
   &::after {
+    @include mixins.smooth-transition;
     content: "";
     position: absolute;
     left: 0;
@@ -138,8 +133,6 @@ $-tablet-desktop-main-photo-height: 400px;
     bottom: 0;
     border-bottom: 2px solid;
     opacity: 0;
-
-    @include mixins.smooth-transition;
   }
 
   &:hover::after {

@@ -6,7 +6,6 @@
   @include mixins.base-horizontal-paddings(
     var.$base-container-horizontal-padding-index,
   );
-
   max-width: 550px;
   margin: 0 auto;
   padding-top: 23px;
@@ -60,25 +59,21 @@
 }
 
 .services__title {
+  @include mixins.font-18;
   margin-top: 8px;
   margin-bottom: 0;
-  font-size: 18px;
-  line-height: 1.44;
 
   @media (min-width: var.$tablet-width) {
+    @include mixins.font-21;
     margin-top: 0;
     margin-bottom: 25px;
-
-    font-size: 21px;
-    line-height: 1.24;
     text-align: center;
   }
 }
 
 .services__text {
+  @include mixins.font-14;
   margin: 0;
-  font-size: 14px;
-  line-height: 1.5;
   color: var.$color-grey-dark;
 
   @media (min-width: var.$tablet-width) {

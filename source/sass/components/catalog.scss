@@ -3,7 +3,6 @@
 
 .catalog {
   @include mixins.list-style-reset;
-
   border-top: var.$border-line;
 
   @media (min-width: var.$catalog-tablet-min-width) {
