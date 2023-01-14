@@ -9,6 +9,7 @@ $-link-shadow-bottom: inset 0 -1px 0 rgba(1, 1, 1, 0.2);
 }
 
 .site-navigation__toggle {
+  @include mixins.smooth-transition;
   position: absolute;
   top: 0;
   right: 0;
@@ -18,8 +19,6 @@ $-link-shadow-bottom: inset 0 -1px 0 rgba(1, 1, 1, 0.2);
   margin: 0;
   border: none;
   background-color: transparent;
-
-  @include mixins.smooth-transition;
 
   &::before,
   &::after {
@@ -86,10 +85,12 @@ $-link-shadow-bottom: inset 0 -1px 0 rgba(1, 1, 1, 0.2);
       width: 23px;
       height: 22px;
       background-image:
-        linear-gradient(to bottom,
+        linear-gradient(
+          to bottom,
           var.$color-blue-basic 0,
           var.$color-blue-basic 4px,
-          transparent 4px);
+          transparent 4px
+        );
       background-size: 100% 9px;
     }
 
@@ -124,15 +125,13 @@ $-link-shadow-bottom: inset 0 -1px 0 rgba(1, 1, 1, 0.2);
 }
 
 .site-navigation__link {
+  @include mixins.font-18;
+  @include mixins.blue-intaractive-element;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 17px 65px 13px;
-
-  @include mixins.font-18;
   font-weight: 700;
-
-  @include mixins.blue-intaractive-element;
   box-shadow:
     $-link-shadow-top,
     $-link-shadow-bottom;
@@ -143,13 +142,11 @@ $-link-shadow-bottom: inset 0 -1px 0 rgba(1, 1, 1, 0.2);
   }
 
   @media (min-width: var.$tablet-width) {
-    padding: 18px;
-
     @include mixins.font-14;
+    @include mixins.intaractive-element;
+    padding: 18px;
     font-weight: 700;
     box-shadow: none;
-
-    @include mixins.intaractive-element;
 
     &,
     &:hover,

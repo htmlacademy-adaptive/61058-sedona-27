@@ -2,11 +2,10 @@
 @use "../mixins.scss";
 
 .likes {
+  @include mixins.smooth-transition;
   display: flex;
   align-items: flex-end;
   color: inherit;
-
-  @include mixins.smooth-transition;
 
   &:hover {
     opacity: 0.7;

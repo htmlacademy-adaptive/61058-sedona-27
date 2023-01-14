@@ -3,7 +3,6 @@
 
 .advantages {
   @include mixins.list-style-reset;
-
   display: flex;
   flex-direction: column;
   counter-reset: advantage;
@@ -24,7 +23,6 @@
     right: var.$base-container-horizontal-padding;
     bottom: 0;
     height: 1px;
-
     background-color: var.$color-grey-rare-1;
   }
 

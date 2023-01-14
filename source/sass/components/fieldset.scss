@@ -15,20 +15,18 @@ $-legend-line-width: calc((100% - 400px) / 2);
 }
 
 .fieldset__legend {
+  @include mixins.font-18;
   margin: 0 auto;
   padding: 0;
   padding-top: 24px;
   padding-bottom: 20px;
-
-  @include mixins.font-18;
   font-weight: 700;
   text-align: center;
 
   @media (min-width: var.$tablet-width) {
+    @include mixins.font-21;
     padding: 0;
     margin-bottom: 28px;
-
-    @include mixins.font-21;
 
     &--decorated {
       position: relative;
@@ -58,7 +56,6 @@ $-legend-line-width: calc((100% - 400px) / 2);
 
 .fieldset__list {
   @include mixins.list-style-reset;
-
   display: grid;
   align-items: center;
   gap: 16px;

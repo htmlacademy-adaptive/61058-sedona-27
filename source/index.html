@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,37 +12,19 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
-  <!-- Проверяет поддержку WebP -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      testWebP(document.body)
-    })
-
-    function testWebP(elem) {
-      const webP = new Image();
-      webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-      webP.onload = webP.onerror = function () {
-        webP.height === 2 ? elem.classList.add('webp') : elem.classList.add('no-webp');
-      }
-    }
-  </script>
-
+  <script>document.addEventListener("DOMContentLoaded",function(){testWebP(document.body)});function testWebP(e){let A=new Image;A.src="data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA",A.onload=A.onerror=function(){2===A.height?e.classList.add("webp"):e.classList.add("no-webp")}}</script>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-
 <body class="page__body">
   <div class="page__container">
     <header class="header">
       <a class="header__logo" href="./">
         <img src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
       </a>
-
       <nav class="site-navigation site-navigation--no-js">
         <button class="site-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-
         <ul class="site-navigation__list">
           <li class="site-navigation__item">
             <a class="site-navigation__link site-navigation__link--current">Главная</a>
@@ -61,20 +42,17 @@
         </ul>
       </nav>
     </header>
-
     <main class="page__main main-index">
       <div class="main-index__intro intro">
         <img class="intro__image" src="img/vector/intro-text.svg" width="282" height="214"
           alt="Надпись &#34;Welcome to the gorgeous Sedona. &#8220;Because the Grand Canyon sucks!&#8222;&#34;">
       </div>
-
       <section class="main-index__advantages advantages-section">
         <div class="advantages-section__entrance">
           <h1 class="advantages-section__title">Cедона &mdash; небольшой городок&nbsp;в&nbsp;Аризоне,
             заслуживающий&nbsp;большего!</h1>
           <p class="advantages-section__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
-
         <ol class="advantages">
           <li class="advantages__item advantages__item--illustrated">
             <div class="advantages__element-container advantage-element advantage-element--special">
@@ -82,7 +60,6 @@
               <p class="advantage-element__text">Седона не аттракцион для туристов, там&nbsp;течет своя
                 жизнь</p>
             </div>
-
             <picture class="advantages__image-container">
               <source type="image/webp" media="(min-width: 769px)"
                 srcset="img/desktop/advantages-city.webp 1x, img/desktop/advantages-city@2x.webp 2x">
@@ -97,7 +74,6 @@
               <img class="advantages__image" src="img/mobile/advantages-city.jpg" width="320" height="260"
                 srcset="img/mobile/advantages-city@2x.jpg 2x" alt="Окрестности города Седоны.">
             </picture>
-
             <ul class="services">
               <li class="services__item">
                 <h3 class="services__title">Жилье</h3>
@@ -163,7 +139,6 @@
           </li>
         </ol>
       </section>
-
       <section class="offer">
         <h2 class="offer__title">Заинтересовались?</h2>
         <p class="offer__text">Укажите предполагаемые даты поездки, <br class="line-break line-break--tablet">
@@ -171,7 +146,6 @@
         </p>
         <a class="offer__find-hotel button" href="#">Найти гостиницу</a>
       </section>
-
       <section class="map">
         <h2 class="visually-hidden">Седона на карте</h2>
         <iframe class="map__window"
@@ -182,7 +156,6 @@
     </main>
     <footer class="footer">
       <p class="footer__hashtag">#visitsedona</p>
-
       <ul class="footer__social social" aria-label="Социальные сети.">
         <li class="social__item">
           <a class="social__link" href="#" target="_blank">
@@ -209,7 +182,6 @@
           </a>
         </li>
       </ul>
-
       <a class="footer__maid-in" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         Разработано
         <svg width="27" height="35" role="img" aria-label="HTML Academy">
@@ -218,8 +190,6 @@
       </a>
     </footer>
   </div>
-
   <script src="js/main.min.js" type="module"></script>
 </body>
-
 </html>
