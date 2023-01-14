@@ -2,11 +2,11 @@
 @use "../mixins.scss";
 
 .button {
+  @include mixins.font-18;
+  @include mixins.blue-intaractive-element;
   display: inline-block;
   margin: 0;
   padding: 16px 45px;
-
-  @include mixins.font-18;
   font-family: inherit;
   font-weight: 700;
   text-align: center;
@@ -14,8 +14,6 @@
   border: none;
   word-wrap: break-word;
   cursor: pointer;
-
-  @include mixins.blue-intaractive-element;
 
   &:disabled {
     background-color: var.$color-grey-rare-2;

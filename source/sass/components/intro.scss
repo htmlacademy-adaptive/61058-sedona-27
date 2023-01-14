@@ -60,11 +60,9 @@ $-padding-bottom-secondary: min(120px, $-padding-bottom-calc-secondary);
 
 .intro {
   @include mixins.base-horizontal-paddings;
-
   position: relative;
   padding-top: $-padding-top;
   padding-bottom: $-padding-bottom;
-
   background-color: var.$color-background-intro;
   background-image: var(--bg-image);
   background-repeat: no-repeat;

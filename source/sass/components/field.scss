@@ -2,19 +2,15 @@
 @use "../mixins.scss";
 
 .field {
+  @include mixins.font-18;
+  @include mixins.smooth-transition;
   margin: 0;
   padding: 12px;
-
   font-family: inherit;
-  font-size: 18px;
-  line-height: 1.44;
   font-weight: 700;
-
   border: 4px solid transparent;
   background-color: var.$color-grey-basic;
   outline: none;
-
-  @include mixins.smooth-transition;
 
   &::placeholder {
     color: var.$color-black-tr-30;

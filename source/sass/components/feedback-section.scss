@@ -15,7 +15,6 @@
 
 .feedback-section__entrance {
   @include mixins.base-horizontal-paddings;
-
   max-width: 435px;
   margin: 0 auto;
   margin-bottom: 28px;
@@ -31,15 +30,13 @@
 }
 
 .feedback-section__title {
+  @include mixins.font-18;
   margin: 0;
   margin-bottom: 24px;
-
-  @include mixins.font-18;
   text-align: center;
 
   @media (min-width: var.$tablet-width) {
     margin-bottom: 11px;
-
     font-size: 30px;
   }
 

@@ -63,12 +63,11 @@ $-map-marker: radial-gradient(
 }
 
 .map__window {
+  @include map-background(var(--bg-image));
   display: block;
   border: none;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 27px 27px, auto 100%;
-
-  @include map-background(var(--bg-image));
 }

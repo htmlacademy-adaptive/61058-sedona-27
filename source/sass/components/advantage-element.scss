@@ -41,32 +41,29 @@ $-text-max-width-mobile: 400px;
 }
 
 .advantage-element__title {
+  @include mixins.font-18;
   position: relative;
   max-width: $-text-max-width-mobile;
   margin: 0 auto;
   margin-bottom: 49px;
-
-  @include mixins.font-18;
   text-align: center;
 
   &::after {
+    @include mixins.font-14;
     counter-increment: advantage;
     content: "— №" counter(advantage) " —";
     position: absolute;
     top: calc(100% + 11px);
     left: 50%;
     transform: translateX(-50%);
-
-    @include mixins.font-14;
     font-weight: 400;
     color: var.$color-grey-dark;
   }
 
   @media (min-width: var.$tablet-width) {
+    @include mixins.font-21;
     max-width: 150px;
     margin-bottom: 56px;
-
-    @include mixins.font-21;
   }
 }
 
@@ -77,10 +74,9 @@ $-text-max-width-mobile: 400px;
 }
 
 .advantage-element__text {
+  @include mixins.font-14;
   max-width: $-text-max-width-mobile;
   margin: 0 auto;
-
-  @include mixins.font-14;
   text-align: center;
   color: var.$color-grey-dark;
 }
